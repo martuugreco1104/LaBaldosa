@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Baldosa | Editorial Premium</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVBAR SAAS/CLEAN -->
+    <nav class="premium-navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="nav-logo-img">
+                    <img src="Logos/BLDSredondo.png" alt="BLDS Logo">
+                </a>
+            </div>
+            
+            <div class="nav-center hidden-mobile">
+                <a href="#menu">MENÚ</a>
+                <a href="#contacto">EL RANCHO & HOUSE</a>
+                <a href="#contacto">CONTACTO</a>
+            </div>
+            
+            <div class="nav-right hidden-mobile" style="gap: 1rem; align-items: center;">
+                <div class="nav-status-pill">
+                    <span class="status-dot"></span> ABIERTO HASTA 23:30 HS
+                </div>
+                <a href="#menu" class="btn-primary pill-btn" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">PEDÍ</a>
+            </div>
+            
+            <div class="nav-mobile-trigger hidden-desktop">
+                <span>☰</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HERO FOTOGRÁFICO -->
+    <section class="photo-hero" id="hero">
+        <div class="hero-bg-image"></div>
+        <div class="hero-buttons-overlay">
+            <a href="#menu" class="btn-primary pill-btn hero-main-btn">PEDIR</a>
+            <a href="#contacto" class="hero-sub-btn">¿DÓNDE RANCHAMOS?</a>
+        </div>
+    </section>
+
+    <!-- MARQUEE DE TRANSICIÓN -->
+    <div class="marquee-editorial">
+        <div class="marquee-track mono-text">
+            SUPPORT YOUR LOCAL EMPANADA SHOP • BARCELONA • RANCHEO CLUB: LEPANT 125 • HOUSE: ROGER DE FLOR 252 • BIRRAS & EMPANADAS • RETIRO Y TAKE AWAY • SUPPORT YOUR LOCAL EMPANADA SHOP • BARCELONA • 
+        </div>
+    </div>
+
+    <!-- EL RANCHO & HOUSE (Movido antes del menú) -->
+    <section class="immersive-locales" id="contacto">
+        <div class="loc-header">
+            <h2 class="loc-header-title">El Rancho & House</h2>
+            <p class="loc-header-subtitle">Dos locaciones, la misma masa artesanal.</p>
+        </div>
+        <div class="loc-grid">
+            <!-- EL RANCHO -->
+            <div class="loc-block">
+                <div class="loc-image-slider">
+                    <div class="slides">
+                        <img src="Rancheo/rancheo3.png" alt="El Rancho Vereda 1" class="slide active">
+                        <img src="Rancheo/rancheo2.png" alt="El Rancho Vereda 2" class="slide">
+                        <img src="Rancheo/rancheo4.png" alt="El Rancho Vereda 3" class="slide">
+                        <img src="Rancheo/rancheo.jpeg" alt="El Rancho Vereda 4" class="slide">
+                    </div>
+                    <button class="slider-btn prev-btn">&larr;</button>
+                    <button class="slider-btn next-btn">&rarr;</button>
+                </div>
+                <div class="loc-info">
+                    <h2 class="loc-title">EL RANCHO</h2>
+                    <div class="loc-badge">CARRER DE LEPANT 125</div>
+                    <p class="loc-desc">Nuestra primera casa. Horno a la vista y el espíritu de siempre frente a L'Auditori.</p>
+                    <div class="loc-map-container">
+                        <iframe src="https://maps.google.com/maps?q=Carrer+de+Lepant+125,+Barcelona&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://maps.app.goo.gl/k1V6tJ5Y2N8E4T9j6" target="_blank" class="btn-primary pill-btn loc-btn">ABRIR EN MAPS &rarr;</a>
+                </div>
+            </div>
+
+            <!-- THE HOUSE -->
+            <div class="loc-block">
+                <div class="loc-image-slider">
+                    <div class="slides">
+                        <img src="House/House1.png" alt="The House Interior 1" class="slide active">
+                        <img src="House/House2.png" alt="The House Interior 2" class="slide">
+                        <img src="House/House3.png" alt="The House Interior 3" class="slide">
+                    </div>
+                    <button class="slider-btn prev-btn">&larr;</button>
+                    <button class="slider-btn next-btn">&rarr;</button>
+                </div>
+                <div class="loc-info">
+                    <h2 class="loc-title">THE HOUSE</h2>
+                    <div class="loc-badge">CARRER DE ROGER DE FLOR 252</div>
+                    <p class="loc-desc">El nuevo spot. Más espacio, la misma vibra, ideal para acompañar tus empanadas con birra.</p>
+                    <div class="loc-map-container">
+                        <iframe src="https://maps.google.com/maps?q=Carrer+de+Roger+de+Flor+252,+Barcelona&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://maps.app.goo.gl/K2L9xM5Y2N8E4T9j6" target="_blank" class="btn-primary pill-btn loc-btn">ABRIR EN MAPS &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PRODUCTO / MENÚ -->
+    <section class="ordering-experience" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">RECIÉN SALIDAS.</h3>
+                <p class="section-subtitle">ELEGÍ TUS EMPANADAS.</p>
+            </div>
+            
+            <div class="order-split">
+                
+                <div class="menu-column-left">
+                    <div class="category-filters">
+                        <button class="capsule-btn active" data-filter="Clásicas">CLÁSICAS</button>
+                        <button class="capsule-btn" data-filter="Especiales">ESPECIALES</button>
+                        <button class="capsule-btn" data-filter="Vegetarianas">VEGGIES</button>
+                        <button class="capsule-btn" data-filter="Bebidas">BEBIDAS</button>
+                    </div>
+
+                    <div class="menu-list" id="menu-container">
+                        <!-- JS Injects Cards Here -->
+                    </div>
+                </div>
+
+                <div class="checkout-wrapper" id="checkout-drawer">
+                    <div class="checkout-ticket">
+                        <div class="checkout-drag-handle hidden-desktop" id="close-drawer"></div>
+                        
+                        <div class="ticket-header">
+                            <h2>Tu Pedido</h2>
+                        </div>
+                        
+                        <div class="checkout-radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="branch" value="rancho" id="main-branch-rancho" checked>
+                                Rancho (Lepant)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="branch" value="house" id="main-branch-house">
+                                House (Roger)
+                            </label>
+                        </div>
+                        
+                        <div class="segmented-control">
+                            <input type="radio" id="del-pickup" name="delivery" value="takeaway" checked>
+                            <label for="del-pickup" class="segment-label">Retiro local</label>
+
+                            <input type="radio" id="del-ship" name="delivery" value="delivery">
+                            <label for="del-ship" class="segment-label">Envío a casa</label>
+                        </div>
+
+                        <form id="checkout-form" class="clean-form">
+                            <input type="text" id="customer-name" required placeholder="Tu nombre">
+                            <input type="tel" id="customer-phone" required placeholder="Teléfono de contacto">
+                            <input type="text" id="customer-notes" placeholder="Nota o aclaración (opcional)">
+                        </form>
+                        
+                        <div class="ticket-divider"></div>
+                        
+                        <div class="cart-items ticket-text" id="cart-summary">
+                            <p class="cart-empty">TICKET VACÍO</p>
+                        </div>
+                        
+                        <div class="ticket-divider"></div>
+                        
+                        <div class="checkout-bottom">
+                            <div class="total-row ticket-text">
+                                <span>TOTAL</span>
+                                <span class="total-price" id="total-price">€0.00</span>
+                            </div>
+                            <button id="btn-confirm" class="btn-primary" disabled>IMPRIMIR COMANDA (WP) &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. MERCHANDISING -->
+    <section class="section-merch">
+        <div class="container" style="position:relative; z-index:2;">
+            <div class="merch-header">
+                <h2 class="merch-title">STAY BONEES.<br>MERCH.</h2>
+                <p class="mono-text merch-subtitle">SUPPORT YOUR LOCAL EMPANADA SHOP.</p>
+            </div>
+            <div class="merch-grid">
+                <div class="merch-card">
+                    <div class="merch-img-wrapper">
+                        <img src="merch/merch.png" alt="T-Shirt BLDS STAFF">
+                    </div>
+                    <div class="merch-info mono-text">
+                        <span>T-SHIRT STAFF</span>
+                        <span>€25</span>
+                    </div>
+                </div>
+                <div class="merch-card">
+                    <div class="merch-img-wrapper">
+                        <img src="merch/merch3.jpg" alt="Cap Rancheo Club">
+                    </div>
+                    <div class="merch-info mono-text">
+                        <span>CAP RANCHEO</span>
+                        <span>€18</span>
+                    </div>
+                </div>
+                <div class="merch-card">
+                    <div class="merch-img-wrapper">
+                        <img src="merch/merch5.webp" alt="T-Shirt Stay Bonees">
+                    </div>
+                    <div class="merch-info mono-text">
+                        <span>T-SHIRT BONEES</span>
+                        <span>€25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEPARADOR VISUAL -->
+    <div class="brand-divider full-width-banner">
+        <img src="branding/rancheo logos.webp" alt="Rancheo Logos">
+    </div>
+
+    <!-- Mobile Sticky Bar -->
+    <div class="mobile-sticky-bar hidden-desktop" id="mobile-cart-bar">
+        <button class="btn-primary flex-between" id="open-drawer">
+            <span>Ver Pedido (<span id="mob-qty">0</span>)</span>
+            <span id="mob-total">€0.00</span>
+        </button>
+    </div>
+
+    <!-- 6. INSTAGRAM FEED EDITORIAL -->
+    <section class="ig-feed-section">
+        <div class="container">
+            <h2 class="ig-title">NUESTRO FEED</h2>
+            <div class="ig-grid">
+                <!-- Using block anchors to simulate an external feed layout -->
+                <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
+                    <img src="fotos marca/BLDA1.png" alt="IG Post 1">
+                    <div class="ig-overlay"><span>VER EN IG</span></div>
+                </a>
+                <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
+                    <img src="fotos marca/BLDA2.png" alt="IG Post 2">
+                    <div class="ig-overlay"><span>VER EN IG</span></div>
+                </a>
+                <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
+                    <img src="fotos marca/BLDA10.png" alt="IG Post 3">
+                    <div class="ig-overlay"><span>VER EN IG</span></div>
+                </a>
+                <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
+                    <img src="fotos marca/BLDA11.png" alt="IG Post 4">
+                    <div class="ig-overlay"><span>VER EN IG</span></div>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="btn-primary pill-btn" style="background: var(--brand-green); color: white;">SEGUINOS EN @LABALDOSA.BCN</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h2>LA BALDOSA®</h2>
+                <p class="mono-text">EMPANADES & BAR</p>
+                <p class="footer-tagline">Gracias por ranchar.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4 class="mono-text">LOCACIONES</h4>
+                    <p>Lepant 125, Barcelona</p>
+                    <p>Roger de Flor 252, Barcelona</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="mono-text">SOCIAL</h4>
+                    <a href="https://www.instagram.com/labaldosabcn/" target="_blank">Instagram</a>
+                    <a href="mailto:hola@labaldosa.bcn">Contacto</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom mono-text">
+            <p>&copy; 2026 La Baldosa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
