@@ -22,31 +22,33 @@
                 </a>
             </div>
             
-            <div class="nav-center hidden-mobile">
+            <div class="nav-center hidden-mobile" id="nav-center">
                 <a href="#menu">MENÚ</a>
-                <a href="#contacto">EL RANCHO & HOUSE</a>
+                <a href="#contacto">RANCHEO & HOUSE</a>
                 <a href="#contacto">CONTACTO</a>
             </div>
             
-            <div class="nav-right hidden-mobile" style="gap: 1rem; align-items: center;">
+            <div class="nav-right hidden-mobile" id="nav-right" style="gap: 1rem; align-items: center;">
                 <div class="nav-status-pill">
                     <span class="status-dot"></span> ABIERTO HASTA 23:30 HS
                 </div>
                 <a href="#menu" class="btn-primary pill-btn" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">PEDÍ</a>
             </div>
             
-            <div class="nav-mobile-trigger hidden-desktop">
+            <div class="nav-mobile-trigger hidden-desktop" id="mobile-trigger">
                 <span>☰</span>
             </div>
         </div>
     </nav>
 
-    <!-- 1. HERO FOTOGRÁFICO -->
+        <!-- 1. HERO FOTOGRÁFICO -->
     <section class="photo-hero" id="hero">
-        <div class="hero-bg-image"></div>
+        <picture class="hero-picture">
+            <source media="(max-width: 768px)" srcset="hero/MOBILE.png">
+            <img src="hero/Hero Desktop.png" alt="La Baldosa Hero" class="hero-img">
+        </picture>
         <div class="hero-buttons-overlay">
             <a href="#menu" class="btn-primary pill-btn hero-main-btn">PEDIR</a>
-            <a href="#contacto" class="hero-sub-btn">¿DÓNDE RANCHAMOS?</a>
         </div>
     </section>
 
@@ -59,15 +61,15 @@
 
     <!-- 2. PRODUCTO / MENÚ -->
     <section class="ordering-experience" id="menu">
-        <div class="container">
-            <div class="section-header">
+        <div class="container pos-container">
+            <div class="section-header pos-header">
                 <h3 class="section-title">RECIÉN SALIDAS.</h3>
                 <p class="section-subtitle">ELEGÍ TUS EMPANADAS.</p>
             </div>
             
-            <div class="order-split">
+            <div class="order-split pos-split">
                 
-                <div class="menu-column-left">
+                <div class="menu-column-left pos-menu">
                     <div class="category-filters">
                         <button class="capsule-btn active" data-filter="Clásicas">CLÁSICAS</button>
                         <button class="capsule-btn" data-filter="Especiales">ESPECIALES</button>
@@ -75,13 +77,13 @@
                         <button class="capsule-btn" data-filter="Bebidas">BEBIDAS</button>
                     </div>
 
-                    <div class="menu-list" id="menu-container">
+                    <div class="menu-list pos-list" id="menu-container">
                         <!-- JS Injects Cards Here -->
                     </div>
                 </div>
 
                 <div class="checkout-wrapper" id="checkout-drawer">
-                    <div class="checkout-ticket">
+                    <div class="checkout-ticket pos-ticket">
                         <div class="checkout-drag-handle hidden-desktop" id="close-drawer"></div>
                         
                         <div class="ticket-header">
@@ -91,7 +93,7 @@
                         <div class="checkout-radio-group">
                             <label class="radio-label">
                                 <input type="radio" name="branch" value="rancho" id="main-branch-rancho" checked>
-                                Rancho (Lepant)
+                                Rancheo (Lepant)
                             </label>
                             <label class="radio-label">
                                 <input type="radio" name="branch" value="house" id="main-branch-house">
@@ -108,9 +110,9 @@
                         </div>
 
                         <form id="checkout-form" class="clean-form">
-                            <input type="text" id="customer-name" required placeholder="Tu nombre">
-                            <input type="tel" id="customer-phone" required placeholder="Teléfono de contacto">
-                            <input type="text" id="customer-notes" placeholder="Nota o aclaración (opcional)">
+                            <input type="text" id="customer-name" class="input-req" required placeholder="Tu nombre (Obligatorio)">
+                            <input type="text" id="customer-address" class="input-req hidden" placeholder="Dirección de envío (Obligatorio)">
+                            <input type="text" id="customer-notes" class="input-opt" placeholder="Nota (Opcional)">
                         </form>
                         
                         <div class="ticket-divider"></div>
@@ -126,7 +128,7 @@
                                 <span>TOTAL</span>
                                 <span class="total-price" id="total-price">€0.00</span>
                             </div>
-                            <button id="btn-confirm" class="btn-primary" disabled>IMPRIMIR COMANDA (WP) &rarr;</button>
+                            <button id="btn-confirm" class="btn-primary pos-btn" disabled>HACER PEDIDO &rarr;</button>
                         </div>
                     </div>
                 </div>
@@ -134,38 +136,53 @@
         </div>
     </section>
 
-    <!-- EL RANCHO & HOUSE (Movido antes del menú) -->
+    <!-- MARQUESINA DE FOTOS (FILM) -->
+    <div class="photo-marquee film-strip">
+        <div class="photo-marquee-track">
+            <div class="photo-marquee-item"><img src="empanadas/BLDA3.png" alt="Empanada"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA4.png" alt="Empanada"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA6.png" alt="Empanada"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA7.png" alt="Empanada"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA14.png" alt="Empanada"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA3.png" alt="Empanada"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA4.png" alt="Empanada"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA6.png" alt="Empanada"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA7.png" alt="Empanada"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA14.png" alt="Empanada"></div>
+        </div>
+    </div>
+
+    <!-- RANCHEO & HOUSE (Movido antes del menú) -->
     <section class="immersive-locales" id="contacto">
         <div class="loc-header">
-            <h2 class="loc-header-title">El Rancho & House</h2>
+            <h2 class="loc-header-title">Rancheo & House</h2>
             <p class="loc-header-subtitle">Dos locaciones, la misma masa artesanal.</p>
         </div>
         <div class="loc-grid">
-            <!-- EL RANCHO -->
-            <div class="loc-block">
+            <!-- RANCHEO -->
+            <a href="https://maps.app.goo.gl/k1V6tJ5Y2N8E4T9j6" target="_blank" rel="noopener noreferrer" class="loc-block loc-link">
                 <div class="loc-image-slider">
                     <div class="slides">
-                        <img src="Rancheo/rancheo3.png" alt="El Rancho Vereda 1" class="slide active">
-                        <img src="Rancheo/rancheo2.png" alt="El Rancho Vereda 2" class="slide">
-                        <img src="Rancheo/rancheo4.png" alt="El Rancho Vereda 3" class="slide">
-                        <img src="Rancheo/rancheo.jpeg" alt="El Rancho Vereda 4" class="slide">
+                        <img src="Rancheo/rancheo3.png" alt="Rancheo Vereda 1" class="slide active">
+                        <img src="Rancheo/rancheo2.png" alt="Rancheo Vereda 2" class="slide">
+                        <img src="Rancheo/rancheo4.png" alt="Rancheo Vereda 3" class="slide">
+                        <img src="Rancheo/rancheo.jpeg" alt="Rancheo Vereda 4" class="slide">
                     </div>
                     <button class="slider-btn prev-btn">&larr;</button>
                     <button class="slider-btn next-btn">&rarr;</button>
                 </div>
                 <div class="loc-info">
-                    <h2 class="loc-title">EL RANCHO</h2>
+                    <h2 class="loc-title">RANCHEO</h2>
                     <div class="loc-badge">CARRER DE LEPANT 125</div>
                     <p class="loc-desc">Nuestra primera casa. Horno a la vista y el espíritu de siempre frente a L'Auditori.</p>
-                    <div class="loc-map-container">
+                    <div class="loc-map-container" style="pointer-events:none;">
                         <iframe src="https://maps.google.com/maps?q=Carrer+de+Lepant+125,+Barcelona&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <a href="https://maps.app.goo.gl/k1V6tJ5Y2N8E4T9j6" target="_blank" class="btn-primary pill-btn loc-btn">ABRIR EN MAPS &rarr;</a>
                 </div>
-            </div>
+            </a>
 
             <!-- THE HOUSE -->
-            <div class="loc-block">
+            <a href="https://maps.app.goo.gl/K2L9xM5Y2N8E4T9j6" target="_blank" rel="noopener noreferrer" class="loc-block loc-link">
                 <div class="loc-image-slider">
                     <div class="slides">
                         <img src="House/House1.png" alt="The House Interior 1" class="slide active">
@@ -179,12 +196,11 @@
                     <h2 class="loc-title">THE HOUSE</h2>
                     <div class="loc-badge">CARRER DE ROGER DE FLOR 252</div>
                     <p class="loc-desc">El nuevo spot. Más espacio, la misma vibra, ideal para acompañar tus empanadas con birra.</p>
-                    <div class="loc-map-container">
+                    <div class="loc-map-container" style="pointer-events:none;">
                         <iframe src="https://maps.google.com/maps?q=Carrer+de+Roger+de+Flor+252,+Barcelona&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <a href="https://maps.app.goo.gl/K2L9xM5Y2N8E4T9j6" target="_blank" class="btn-primary pill-btn loc-btn">ABRIR EN MAPS &rarr;</a>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -192,8 +208,7 @@
     <section class="section-merch">
         <div class="container" style="position:relative; z-index:2;">
             <div class="merch-header">
-                <h2 class="merch-title">STAY BONEES.<br>MERCH.</h2>
-                <p class="mono-text merch-subtitle">SUPPORT YOUR LOCAL EMPANADA SHOP.</p>
+                <h2 class="merch-title">SUPPORT YOUR LOCAL<br>EMPANADA SHOP</h2>
             </div>
             <div class="merch-grid">
                 <div class="merch-card">
@@ -245,12 +260,12 @@
         <div class="about-text">
             <img src="ilustraciones/ilustraciones y recursos 2.png" alt="Ilustración" class="floating-ilus ilus-1">
             <img src="ilustraciones/ilustraciones y recursos 6.png" alt="Ilustración" class="floating-ilus ilus-2">
-            <h2 class="about-title">LA MASA<br>ES NUESTRA<br>RELIGIÓN.</h2>
+            <h2 class="about-title manifesto-title">LA MASA<br>ES NUESTRA<br>RELIGIÓN.</h2>
             <p class="about-desc">No somos solo empanadas. Somos el resultado de amasar, probar y ranchar todos los días. Nacimos en Barcelona con alma argentina, trayendo ese producto sincero, hecho a mano, para acompañar una birra fría al final del día. Ese espacio para relajarse y disfrutar de la compañía de otros sin prisas.</p>
             <a href="#menu" class="btn-primary pill-btn" style="align-self: flex-start;">NUESTRO MENÚ</a>
         </div>
         <div class="about-image">
-            <img src="fotos marca/BLDA8.png" alt="Staff de La Baldosa amasando">
+            <img src="fotos marca/Empanada.png" alt="Empanada La Baldosa" style="object-fit: cover; width: 100%; height: 100%;">
         </div>
     </section>
 
@@ -259,7 +274,7 @@
         <img src="ilustraciones/ilustraciones y recursos 9.png" alt="Ilustración" class="floating-ilus ilus-3">
         <div class="container">
             <div class="reviews-header">
-                <h2 class="reviews-title">QUÉ DICEN LOS QUE RANCHERAN</h2>
+                <h2 class="reviews-title">QUÉ DICEN LOS QUE RANCHEAN</h2>
             </div>
             <div class="reviews-grid">
                 <div class="review-card">
