@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .nav-logo-img img {
     height: 100%;
     width: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 .nav-logo-img:hover {
     transform: rotate(-10deg);
@@ -364,7 +364,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .hero-main-img { 
     width: 100%; 
     height: 100%; 
-    object-fit: cover; 
+    object-fit: contain; 
     display: block; 
     filter: contrast(1.1) grayscale(0.2);
 }
@@ -438,7 +438,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     height: 100%;
 }
 .menu-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-.menu-img { width: 80px; height: 80px; border-radius: 12px; object-fit: cover; flex-shrink: 0; filter: contrast(1.1); }
+.menu-img { width: 80px; height: 80px; border-radius: 12px; object-fit: contain; flex-shrink: 0; filter: contrast(1.1); }
 .menu-content { flex: 1; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
 .menu-title { font-family: var(--font-body); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.2rem; text-transform: none; line-height: 1.2; }
 .menu-desc { font-family: var(--font-body); font-size: 0.85rem; color: var(--text-grey); line-height: 1.3; text-transform: none; }
@@ -565,7 +565,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .merch-img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform var(--transition-fast);
 }
 .merch-card:hover .merch-img-wrapper img {
@@ -593,7 +593,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .brand-divider.full-width-banner img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
@@ -664,7 +664,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     opacity: 0;
     transition: opacity var(--transition-base);
 }
@@ -704,7 +704,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 }
 .loc-image img {
     width: 100%; height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .loc-info {
@@ -784,7 +784,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     display: block; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
 }
-.ig-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.ig-item img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.4s; }
 .ig-item:hover img { transform: scale(1.05); }
 .ig-overlay { 
     position: absolute; inset: 0; background: rgba(0,0,0,0.2); 
@@ -841,7 +841,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .about-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* =========================================
@@ -1076,7 +1076,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .photo-marquee-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     filter: contrast(1.1) grayscale(0.2);
 }
 @keyframes marquee-photo-scroll {
@@ -1149,7 +1149,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .film-strip .photo-marquee-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     filter: sepia(0.3) contrast(1.2) brightness(0.9) !important; /* slight analog feel */
 }
 
@@ -1222,7 +1222,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     width: 100%;
     height: 100%;
     min-height: calc(100vh - 82px);
-    object-fit: cover;
+    object-fit: contain;
 }
 .hero-buttons-overlay {
     bottom: 2rem !important;
@@ -1289,8 +1289,8 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 
     /* Move CTA button to top-left under the "La Baldosa" graphic */
     .hero-buttons-overlay {
-        top: 65% !important;
-        left: 10% !important;
+        top: 40% !important;
+        left: 20% !important;
         bottom: auto !important;
         transform: none !important;
         align-items: flex-start !important;
