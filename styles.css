@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    LA BALDOSA - CONCEPTUAL EDITORIAL DESIGN
    ========================================= */
 :root {
@@ -762,10 +762,12 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .mobile-sticky-bar { display: none; }
 @media (max-width: 899px) {
     .mobile-sticky-bar.has-items {
-        display: block; position: fixed; bottom: 0; left: 0; width: 100%;
+        display: flex; position: fixed; bottom: 0; left: 0; width: 100%;
         background: var(--bg-white); border-top: 1px solid #E0E0E0;
-        padding: 1rem; z-index: 1000; box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+        padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom)) 1rem;
+        z-index: 2000; box-shadow: 0 -4px 12px rgba(0,0,0,0.1); justify-content: center;
     }
+    .mobile-sticky-bar .btn-primary { width: 100%; }
 }
 
 /* =========================================
@@ -1204,8 +1206,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 
 /* Hero Restructuring */
 .photo-hero {
-    height: auto !important;
-    min-height: calc(100vh - 82px) !important;
+    height: calc(100vh - 82px) !important;
     background-color: var(--brand-green);
     display: flex;
     justify-content: center;
@@ -1221,7 +1222,6 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .hero-img {
     width: 100%;
     height: 100%;
-    min-height: calc(100vh - 82px);
     object-fit: contain;
 }
 .hero-buttons-overlay {
@@ -1313,5 +1313,12 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 @media (max-width: 899px) {
     .checkout-ticket .btn-primary {
         margin-bottom: 6rem !important;
+    }
+}
+
+@media (max-width: 899px) {
+    /* Padding so the mobile sticky bar doesn't overlap the last menu items */
+    .ordering-experience {
+        padding-bottom: calc(5rem + env(safe-area-inset-bottom)) !important;
     }
 }
