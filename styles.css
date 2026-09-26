@@ -217,7 +217,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
    1. HERO FOTOGRÁFICO
    ========================================= */
 .photo-hero { 
-    width: 100vw;
+    width: 100%;
     max-width: 100%;
     height: calc(100vh - 82px);
     margin-top: 82px; /* Start after the navbar (approx 82px height) */
@@ -265,8 +265,8 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 }
 .hero-buttons-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 42%;
+    left: 60%;
     transform: translate(-50%, -50%);
     z-index: 2;
     display: flex;
@@ -275,27 +275,35 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     gap: 1rem;
     width: auto;
 }
-@media (max-width: 768px) {
-    .hero-buttons-overlay {
-        top: 50%;
-        bottom: auto;
-        left: 50%;
-        right: auto;
-        transform: translate(-50%, -50%);
-    }
-}
 .hero-main-btn {
     font-size: 1.25rem;
     padding: 0.8rem 3.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    background: var(--brand-green);
-    color: var(--bg-white);
+    background: var(--bg-white);
+    color: var(--brand-green);
     border: 2px solid var(--bg-white);
 }
 .hero-main-btn:hover {
-    background: var(--brand-green-arch);
-    color: var(--bg-white);
-    border-color: var(--bg-white);
+    background: var(--cream);
+    color: var(--brand-green-arch);
+    border-color: var(--cream);
+}
+@media (max-width: 768px) {
+    .hero-buttons-overlay {
+        top: 68%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .hero-main-btn {
+        background: var(--brand-green);
+        color: var(--bg-white);
+        border: 2px solid var(--bg-white);
+    }
+    .hero-main-btn:hover {
+        background: var(--brand-green-arch);
+        color: var(--bg-white);
+        border-color: var(--bg-white);
+    }
 }
 .hero-sub-btn {
     background: transparent;
