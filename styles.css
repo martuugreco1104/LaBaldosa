@@ -447,27 +447,20 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     border: 1px solid #F0F0F0; 
     border-radius: 12px; 
     padding: 1rem; 
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast); 
     height: 100%;
 }
-.product-card {
-    display: grid;
-    grid-template-columns: 80px 1fr auto;
-    grid-template-areas: 
-        "img content price"
-        "img content stepper";
-    gap: 0.5rem 1rem;
-    align-items: center;
-}
 .menu-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-.menu-img { grid-area: img; width: 80px; height: 80px; border-radius: 12px; object-fit: contain; filter: contrast(1.1); }
-.menu-content { grid-area: content; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+.menu-img { width: 80px; height: 80px; border-radius: 12px; object-fit: contain; flex-shrink: 0; filter: contrast(1.1); }
+.menu-content { flex: 1; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
 .menu-title { font-family: var(--font-body); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.2rem; text-transform: none; line-height: 1.2; }
 .menu-desc { font-family: var(--font-body); font-size: 0.85rem; color: var(--text-grey); line-height: 1.3; text-transform: none; }
-.menu-price { grid-area: price; font-family: var(--font-body); font-weight: 700; font-size: 1.1rem; color: var(--brand-green); justify-self: end; }
-.quantity-stepper { grid-area: stepper; justify-self: end; }
-a, button, input, select, textarea, .stepper-btn { touch-action: manipulation; }
+.menu-actions { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 0.5rem; flex-shrink: 0; }
+.menu-price { font-family: var(--font-body); font-weight: 700; font-size: 1.1rem; color: var(--brand-green); }
 
 .stepper { display: flex; align-items: center; background: #F8F8F8; border-radius: 999px; padding: 0.2rem; border: 1px solid #E0E0E0; }
 .stepper-btn { background: transparent; border: none; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; color: var(--text-dark); display: flex; align-items: center; justify-content: center; transition: background var(--transition-fast); }
@@ -853,13 +846,13 @@ a, button, input, select, textarea, .stepper-btn { touch-action: manipulation; }
         padding: 6px 14px !important;
         font-size: 0.8rem !important;
     }
-    .product-card {
+    .menu-card {
         display: grid !important;
         grid-template-columns: 72px 1fr auto !important;
         grid-template-areas: 
-            "img content stepper"
-            "img price stepper" !important;
-        gap: 8px 12px !important;
+            "img content actions"
+            "img price actions" !important;
+        gap: 4px 12px !important;
         padding: 12px !important;
         align-items: center !important;
         min-height: auto !important;
@@ -870,6 +863,8 @@ a, button, input, select, textarea, .stepper-btn { touch-action: manipulation; }
         height: 72px !important;
         border-radius: 8px !important;
         object-fit: cover !important;
+        align-self: start !important;
+        margin-top: 2px !important;
     }
     .menu-content {
         grid-area: content !important;
@@ -877,18 +872,23 @@ a, button, input, select, textarea, .stepper-btn { touch-action: manipulation; }
         flex-direction: column !important;
         justify-content: center !important;
     }
-    .product-price {
+    .menu-actions {
+        display: contents !important;
+    }
+    .menu-price {
         grid-area: price !important;
         font-family: var(--font-mono, monospace) !important;
         font-weight: 700 !important;
         color: var(--brand-green, #0A5C36) !important;
         font-size: 15px !important;
         margin: 0 !important;
+        justify-self: start !important;
     }
-    .quantity-stepper {
-        grid-area: stepper !important;
+    .stepper {
+        grid-area: actions !important;
         margin: 0 !important;
         justify-self: end !important;
+        align-self: center !important;
     }
     .menu-title {
         font-size: 15px !important;
@@ -906,8 +906,11 @@ a, button, input, select, textarea, .stepper-btn { touch-action: manipulation; }
 
     /* 3. REPARAR EL ÁREA DE CLIC Y TOUCH TARGETS (+ / -) */
     .stepper-btn {
-        min-width: 42px !important;
-        min-height: 42px !important;
+        min-width: 34px !important;
+        min-height: 34px !important;
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 1.1rem !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -917,8 +920,9 @@ a, button, input, select, textarea, .stepper-btn { touch-action: manipulation; }
     }
     .stepper-val {
         font-family: 'Space Mono', monospace !important;
-        width: 32px !important;
+        width: 28px !important;
         text-align: center !important;
+        font-size: 0.9rem !important;
     }
 }
 
