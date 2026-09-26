@@ -285,17 +285,17 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     }
 }
 .hero-main-btn {
-    font-size: 1.5rem;
-    padding: 1rem 4rem;
+    font-size: 1.25rem;
+    padding: 0.8rem 3.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    background: var(--bg-white);
-    color: var(--brand-green);
-    border-color: var(--bg-white);
+    background: var(--brand-green);
+    color: var(--bg-white);
+    border: 2px solid var(--bg-white);
 }
 .hero-main-btn:hover {
-    background: #F0F0F0;
-    color: var(--text-dark);
-    border-color: #F0F0F0;
+    background: var(--brand-green-arch);
+    color: var(--bg-white);
+    border-color: var(--bg-white);
 }
 .hero-sub-btn {
     background: transparent;
@@ -459,7 +459,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .menu-category-section { margin-bottom: 2rem; }
 .category-header { font-family: var(--font-body); font-size: 1.2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1rem; border-bottom: 1px solid #E0E0E0; padding-bottom: 0.5rem; }
 .menu-list-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-@media (min-width: 1200px) { .menu-list-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1200px) { .menu-list-grid { gap: 1rem; } }
 
 .menu-card { 
     background: var(--bg-white); 
@@ -894,6 +894,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     flex-direction: column !important;
     align-items: flex-start !important;
     justify-content: center !important;
+    text-align: left !important;
     gap: 3px !important;
     flex: 1 !important;
     min-width: 0 !important;
@@ -902,6 +903,8 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
   .product-title {
     font-size: 15px !important;
     font-weight: 700 !important;
+    text-align: left !important;
+    align-self: flex-start !important;
     margin: 0 !important;
   }
 
@@ -909,6 +912,8 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     font-size: 12px !important;
     line-height: 1.25 !important;
     color: #666 !important;
+    text-align: left !important;
+    align-self: flex-start !important;
     margin: 0 !important;
     display: -webkit-box !important;
     -webkit-line-clamp: 2 !important;
@@ -1107,16 +1112,18 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     pointer-events: none;
 }
 .ilus-1 {
-    width: 120px;
-    top: -40px;
-    right: 10%;
-    transform: rotate(15deg);
+    display: none !important;
 }
 .ilus-2 {
     width: 150px;
     bottom: -30px;
     left: 5%;
     transform: rotate(-10deg);
+}
+@media (min-width: 900px) {
+    .ilus-2 {
+        bottom: 20px;
+    }
 }
 .ilus-3 {
     width: 100px;
