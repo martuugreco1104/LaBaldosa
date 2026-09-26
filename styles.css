@@ -64,6 +64,22 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 @media (max-width: 991px) {
     .hidden-mobile { display: none !important; }
     .hidden-desktop { display: flex; }
+    
+    .nav-container { flex-wrap: wrap; }
+    .nav-center.is-open, .nav-right.is-open {
+        display: flex !important;
+        width: 100%;
+        flex-direction: column;
+        background: var(--cream);
+        padding: 1rem 0;
+        align-items: center;
+        gap: 1rem !important;
+        order: 3;
+    }
+    .nav-right.is-open {
+        padding-top: 0;
+        order: 4;
+    }
 }
 
 /* =========================================
@@ -437,12 +453,14 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     transition: transform var(--transition-fast), box-shadow var(--transition-fast); 
     height: 100%;
 }
+.product-card { justify-content: space-between; }
 .menu-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.product-card-top { display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 0; }
 .menu-img { width: 80px; height: 80px; border-radius: 12px; object-fit: contain; flex-shrink: 0; filter: contrast(1.1); }
 .menu-content { flex: 1; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
 .menu-title { font-family: var(--font-body); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.2rem; text-transform: none; line-height: 1.2; }
 .menu-desc { font-family: var(--font-body); font-size: 0.85rem; color: var(--text-grey); line-height: 1.3; text-transform: none; }
-.menu-actions { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 0.5rem; flex-shrink: 0; }
+.product-card-bottom { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 0.5rem; flex-shrink: 0; }
 .menu-price { font-family: var(--font-body); font-weight: 700; font-size: 1.1rem; color: var(--brand-green); }
 
 .stepper { display: flex; align-items: center; background: #F8F8F8; border-radius: 999px; padding: 0.2rem; border: 1px solid #E0E0E0; }
@@ -829,9 +847,37 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
         padding: 6px 14px !important;
         font-size: 0.8rem !important;
     }
-    .menu-card {
-        padding: 8px 12px !important;
+    .product-card {
+        display: flex !important;
+        flex-direction: column !important;
         gap: 12px !important;
+        padding: 16px !important;
+        min-height: 115px !important;
+        align-items: stretch !important;
+    }
+    .product-card-top {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+    .product-card-bottom {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        margin-top: auto !important;
+        width: 100% !important;
+    }
+    .product-price {
+        font-family: var(--font-mono, monospace) !important;
+        font-weight: 700 !important;
+        color: var(--brand-green, #0A5C36) !important;
+        font-size: 15px !important;
+        margin: 0 !important;
+    }
+    .quantity-stepper {
+        order: -1 !important; /* Stepper on the left */
+        margin: 0 !important;
     }
     .menu-img {
         width: 60px !important;
@@ -851,9 +897,6 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
         -webkit-line-clamp: 2 !important;
         -webkit-box-orient: vertical !important;
         overflow: hidden !important;
-    }
-    .menu-actions {
-        gap: 4px !important;
     }
 
     /* 3. REPARAR EL ÁREA DE CLIC Y TOUCH TARGETS (+ / -) */
