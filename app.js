@@ -76,20 +76,16 @@ function createItemCard(item) {
     const card = document.createElement('article');
     card.className = 'menu-card product-card';
     card.innerHTML = `
-        <div class="product-card-top">
-            <img src="${item.img}" alt="${item.name}" class="menu-img" onerror="this.src='Empanada.png'">
-            <div class="menu-content">
-                <h3 class="menu-title">${item.name}</h3>
-                <p class="menu-desc">${item.desc}</p>
-            </div>
+        <img src="${item.img}" alt="${item.name}" class="menu-img" onerror="this.src='Empanada.png'">
+        <div class="menu-content">
+            <h3 class="menu-title">${item.name}</h3>
+            <p class="menu-desc">${item.desc}</p>
         </div>
-        <div class="product-card-bottom">
-            <div class="stepper quantity-stepper">
-                <button class="stepper-btn minus" data-id="${item.id}">-</button>
-                <div class="stepper-val" id="qty-${item.id}">${qty}</div>
-                <button class="stepper-btn plus" data-id="${item.id}">+</button>
-            </div>
-            <div class="menu-price product-price">€${item.price.toFixed(2)}</div>
+        <div class="menu-price product-price">€${item.price.toFixed(2)}</div>
+        <div class="stepper quantity-stepper">
+            <button class="stepper-btn minus" data-id="${item.id}">-</button>
+            <div class="stepper-val" id="qty-${item.id}">${qty}</div>
+            <button class="stepper-btn plus" data-id="${item.id}">+</button>
         </div>
     `;
     return card;
