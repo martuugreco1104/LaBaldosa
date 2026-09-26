@@ -1207,6 +1207,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 /* Hero Restructuring */
 .photo-hero {
     height: calc(100vh - 82px) !important;
+    overflow: hidden !important;
     background-color: var(--brand-green);
     display: flex;
     justify-content: center;
@@ -1321,4 +1322,64 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     .ordering-experience {
         padding-bottom: calc(5rem + env(safe-area-inset-bottom)) !important;
     }
+}
+
+/* =========================================
+   UPDATES 5 (HERO CTA POSITIONS EXACTAS)
+   ========================================= */
+
+@media (min-width: 769px) {
+  .hero-main-btn {
+    position: absolute !important;
+    left: 70% !important; 
+    top: 56% !important; 
+    transform: translate(-50%, 0) !important;
+    background-color: var(--brand-green, #0A5C36) !important;
+    color: #FFFFFF !important;
+    padding: 12px 32px !important;
+    font-family: var(--font-mono, monospace) !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    border-radius: 9999px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    cursor: pointer !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-main-btn {
+    position: absolute !important;
+    left: 50% !important;
+    top: 33.33% !important; 
+    transform: translate(-50%, -50%) !important;
+    width: auto !important;
+    min-width: 160px !important;
+    text-align: center !important;
+    padding: 12px 28px !important;
+    background-color: var(--brand-green, #0A5C36) !important;
+    color: #FFFFFF !important;
+    font-family: var(--font-mono, monospace) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    border-radius: 9999px !important;
+    border: 2px solid #FAF8F2 !important; /* Borde crema fino */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
+/* Force overlay to cover entire hero so button absolute positioning works */
+.hero-buttons-overlay {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    pointer-events: none !important;
+}
+.hero-main-btn {
+    pointer-events: auto !important;
 }
