@@ -1,4 +1,4 @@
-/* =========================================
+﻿/* =========================================
    LA BALDOSA - CONCEPTUAL EDITORIAL DESIGN
    ========================================= */
 :root {
@@ -565,7 +565,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .merch-img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     transition: transform var(--transition-fast);
 }
 .merch-card:hover .merch-img-wrapper img {
@@ -664,7 +664,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     opacity: 0;
     transition: opacity var(--transition-base);
 }
@@ -704,7 +704,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 }
 .loc-image img {
     width: 100%; height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .loc-info {
@@ -786,7 +786,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     display: block; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
 }
-.ig-item img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.4s; }
+.ig-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
 .ig-item:hover img { transform: scale(1.05); }
 .ig-overlay { 
     position: absolute; inset: 0; background: rgba(0,0,0,0.2); 
@@ -1078,7 +1078,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .photo-marquee-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     filter: contrast(1.1) grayscale(0.2);
 }
 @keyframes marquee-photo-scroll {
@@ -1151,7 +1151,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .film-strip .photo-marquee-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     filter: sepia(0.3) contrast(1.2) brightness(0.9) !important; /* slight analog feel */
 }
 
