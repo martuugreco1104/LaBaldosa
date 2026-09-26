@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    LA BALDOSA - CONCEPTUAL EDITORIAL DESIGN
    ========================================= */
 :root {
@@ -768,6 +768,110 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
         z-index: 2000; box-shadow: 0 -4px 12px rgba(0,0,0,0.1); justify-content: center;
     }
     .mobile-sticky-bar .btn-primary { width: 100%; }
+}
+
+/* =========================================
+   URGENT MOBILE FIXES (<= 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. FIX CRÍTICO DE OVERLAP */
+    .menu-column-left {
+        padding-bottom: calc(100px + env(safe-area-inset-bottom, 20px)) !important;
+    }
+
+    .mobile-sticky-bar.has-items {
+        position: fixed !important;
+        bottom: calc(16px + env(safe-area-inset-bottom, 12px)) !important;
+        left: 16px !important;
+        right: 16px !important;
+        width: calc(100% - 32px) !important;
+        max-width: 480px !important;
+        margin: 0 auto !important;
+        z-index: 9999 !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    /* 4. UNIFICACIÓN DEL VERDE DE MARCA */
+    .mobile-sticky-bar.has-items .btn-primary {
+        background-color: var(--brand-green) !important;
+        color: #FFFFFF !important;
+        border-radius: 9999px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        box-shadow: 0 4px 12px rgba(10, 92, 54, 0.3) !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 1rem 1.5rem !important;
+        width: 100% !important;
+    }
+
+    /* 2. COMPACTAR LA VISTA VERTICAL */
+    .ordering-experience {
+        padding: 2rem 0 !important;
+    }
+    .ordering-experience .section-header {
+        margin-bottom: 16px !important;
+        padding-bottom: 16px !important;
+    }
+    .ordering-experience .section-title {
+        font-size: clamp(1.5rem, 5vw, 1.85rem) !important;
+        margin-bottom: 4px !important;
+    }
+    .category-filters {
+        padding-bottom: 6px !important;
+        margin-bottom: 12px !important;
+    }
+    .capsule-btn {
+        padding: 6px 14px !important;
+        font-size: 0.8rem !important;
+    }
+    .menu-card {
+        padding: 8px 12px !important;
+        gap: 12px !important;
+    }
+    .menu-img {
+        width: 60px !important;
+        height: 60px !important;
+        border-radius: 8px !important;
+        object-fit: cover !important;
+    }
+    .menu-title {
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        margin-bottom: 2px !important;
+    }
+    .menu-desc {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
+    .menu-actions {
+        gap: 4px !important;
+    }
+
+    /* 3. REPARAR EL ÁREA DE CLIC Y TOUCH TARGETS (+ / -) */
+    .stepper-btn {
+        min-width: 42px !important;
+        min-height: 42px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        z-index: 10 !important;
+        pointer-events: auto !important;
+    }
+    .stepper-val {
+        font-family: 'Space Mono', monospace !important;
+        width: 32px !important;
+        text-align: center !important;
+    }
 }
 
 /* =========================================
