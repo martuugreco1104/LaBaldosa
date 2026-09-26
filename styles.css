@@ -1331,8 +1331,8 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 @media (min-width: 769px) {
   .hero-main-btn {
     position: absolute !important;
-    left: 70% !important; 
-    top: 56% !important; 
+    left: 60% !important;
+    top: 50% !important;
     transform: translate(-50%, 0) !important;
     background-color: var(--brand-green, #0A5C36) !important;
     color: #FFFFFF !important;
@@ -1345,6 +1345,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     cursor: pointer !important;
+    z-index: 20 !important;
   }
 }
 
@@ -1352,7 +1353,7 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
   .hero-main-btn {
     position: absolute !important;
     left: 50% !important;
-    top: 33.33% !important; 
+    top: 40% !important;
     transform: translate(-50%, -50%) !important;
     width: auto !important;
     min-width: 160px !important;
@@ -1364,8 +1365,9 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     font-size: 13px !important;
     font-weight: 700 !important;
     border-radius: 9999px !important;
-    border: 2px solid #FAF8F2 !important; /* Borde crema fino */
+    border: 2px solid #FAF8F2 !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+    z-index: 20 !important;
   }
 }
 
@@ -1382,4 +1384,17 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 }
 .hero-main-btn {
     pointer-events: auto !important;
+}
+
+@media (max-width: 899px) {
+    .pos-menu {
+        z-index: 100 !important;
+        position: relative !important;
+        pointer-events: auto !important;
+    }
+    .menu-card {
+        pointer-events: auto !important;
+        z-index: 101 !important;
+        position: relative !important;
+    }
 }
