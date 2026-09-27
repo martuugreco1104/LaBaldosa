@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1790523798677">
 </head>
 <body>
     <!-- NAVBAR SAAS/CLEAN -->
@@ -18,7 +18,7 @@
         <div class="nav-container">
             <div class="nav-left">
                 <a href="#" class="nav-logo-img">
-                    <img src="Logos/BLDSredondo.png" alt="BLDS Logo">
+                    <img src="Logos/BLDSredondo.png" alt="BLDS Logo" loading="lazy">
                 </a>
             </div>
             
@@ -29,9 +29,7 @@
             </div>
             
             <div class="nav-right hidden-mobile" id="nav-right" style="gap: 1rem; align-items: center;">
-                <div class="nav-status-pill">
-                    <span class="status-dot"></span> ABIERTO HASTA 23:30 HS
-                </div>
+                
                 <a href="#menu" class="btn-primary pill-btn" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">PEDÍ</a>
             </div>
             
@@ -40,6 +38,7 @@
             </div>
         </div>
     </nav>
+    <main>
 
         <!-- 1. HERO FOTOGRÁFICO -->
     <section class="photo-hero" id="hero">
@@ -48,7 +47,7 @@
             <img src="hero/Hero Desktop.png" alt="La Baldosa Hero" class="hero-img">
         </picture>
         <div class="hero-buttons-overlay">
-            <a href="#menu" class="btn-primary pill-btn hero-main-btn">PEDIR</a>
+            <a href="#menu" class="btn-primary pill-btn hero-main-btn">PEDÍ</a>
         </div>
     </section>
 
@@ -84,7 +83,7 @@
 
                 <div class="checkout-wrapper" id="checkout-drawer">
                     <div class="checkout-ticket pos-ticket">
-                        <div class="checkout-drag-handle hidden-desktop" id="close-drawer"></div>
+                        
                         
                         <div class="ticket-header">
                             <h2>Tu Pedido</h2>
@@ -115,20 +114,20 @@
                             <input type="text" id="customer-notes" class="input-opt" placeholder="Nota (Opcional)">
                         </form>
                         
-                        <div class="ticket-divider"></div>
+                        
                         
                         <div class="cart-items ticket-text" id="cart-summary">
                             <p class="cart-empty">TICKET VACÍO</p>
                         </div>
                         
-                        <div class="ticket-divider"></div>
+                        
                         
                         <div class="checkout-bottom">
                             <div class="total-row ticket-text">
                                 <span>TOTAL</span>
                                 <span class="total-price" id="total-price">€0.00</span>
                             </div>
-                            <button id="btn-confirm" class="btn-primary pos-btn" disabled>HACER PEDIDO &rarr;</button>
+                            <button id="btn-confirm" class="btn-primary pos-btn" disabled>HACÉ TU PEDIDO &rarr;</button>
                         </div>
                     </div>
                 </div>
@@ -139,16 +138,16 @@
     <!-- MARQUESINA DE FOTOS (FILM) -->
     <div class="photo-marquee film-strip">
         <div class="photo-marquee-track">
-            <div class="photo-marquee-item"><img src="empanadas/BLDA3.png" alt="Empanada"></div>
-            <div class="photo-marquee-item"><img src="empanadas/BLDA4.png" alt="Empanada"></div>
-            <div class="photo-marquee-item"><img src="empanadas/BLDA6.png" alt="Empanada"></div>
-            <div class="photo-marquee-item"><img src="empanadas/BLDA7.png" alt="Empanada"></div>
-            <div class="photo-marquee-item"><img src="empanadas/BLDA14.png" alt="Empanada"></div>
-            <div class="photo-marquee-item"><img src="empanadas/BLDA3.png" alt="Empanada"></div>
-            <div class="photo-marquee-item"><img src="empanadas/BLDA4.png" alt="Empanada"></div>
-            <div class="photo-marquee-item"><img src="empanadas/BLDA6.png" alt="Empanada"></div>
-            <div class="photo-marquee-item"><img src="empanadas/BLDA7.png" alt="Empanada"></div>
-            <div class="photo-marquee-item"><img src="empanadas/BLDA14.png" alt="Empanada"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA3.png" alt="Empanada" loading="lazy"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA4.png" alt="Empanada" loading="lazy"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA6.png" alt="Empanada" loading="lazy"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA7.png" alt="Empanada" loading="lazy"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA14.png" alt="Empanada" loading="lazy"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA3.png" alt="Empanada" loading="lazy"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA4.png" alt="Empanada" loading="lazy"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA6.png" alt="Empanada" loading="lazy"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA7.png" alt="Empanada" loading="lazy"></div>
+            <div class="photo-marquee-item"><img src="empanadas/BLDA14.png" alt="Empanada" loading="lazy"></div>
         </div>
     </div>
 
@@ -160,13 +159,13 @@
         </div>
         <div class="loc-grid">
             <!-- RANCHEO -->
-            <a href="https://maps.app.goo.gl/k1V6tJ5Y2N8E4T9j6" target="_blank" rel="noopener noreferrer" class="loc-block loc-link">
+            <div class="loc-block">
                 <div class="loc-image-slider">
                     <div class="slides">
-                        <img src="Rancheo/rancheo3.png" alt="Rancheo Vereda 1" class="slide active">
-                        <img src="Rancheo/rancheo2.png" alt="Rancheo Vereda 2" class="slide">
-                        <img src="Rancheo/rancheo4.png" alt="Rancheo Vereda 3" class="slide">
-                        <img src="Rancheo/rancheo.jpeg" alt="Rancheo Vereda 4" class="slide">
+                        <img src="Rancheo/rancheo3.png" alt="Rancheo Vereda 1" class="slide active" loading="lazy">
+                        <img src="Rancheo/rancheo2.png" alt="Rancheo Vereda 2" class="slide" loading="lazy">
+                        <img src="Rancheo/rancheo4.png" alt="Rancheo Vereda 3" class="slide" loading="lazy">
+                        <img src="Rancheo/rancheo.jpeg" alt="Rancheo Vereda 4" class="slide" loading="lazy">
                     </div>
                     <button class="slider-btn prev-btn">&larr;</button>
                     <button class="slider-btn next-btn">&rarr;</button>
@@ -175,19 +174,18 @@
                     <h2 class="loc-title">RANCHEO</h2>
                     <div class="loc-badge">CARRER DE LEPANT 125</div>
                     <p class="loc-desc">Nuestra primera casa. Horno a la vista y el espíritu de siempre frente a L'Auditori.</p>
-                    <div class="loc-map-container" style="pointer-events:none;">
+                    <div class="loc-map-container">
                         <iframe src="https://maps.google.com/maps?q=Carrer+de+Lepant+125,+Barcelona&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-            </a>
-
+            </div>
             <!-- THE HOUSE -->
-            <a href="https://maps.app.goo.gl/K2L9xM5Y2N8E4T9j6" target="_blank" rel="noopener noreferrer" class="loc-block loc-link">
+            <div class="loc-block">
                 <div class="loc-image-slider">
                     <div class="slides">
-                        <img src="House/House1.png" alt="The House Interior 1" class="slide active">
-                        <img src="House/House2.png" alt="The House Interior 2" class="slide">
-                        <img src="House/House3.png" alt="The House Interior 3" class="slide">
+                        <img src="House/House1.png" alt="The House Interior 1" class="slide active" loading="lazy">
+                        <img src="House/House2.png" alt="The House Interior 2" class="slide" loading="lazy">
+                        <img src="House/House3.png" alt="The House Interior 3" class="slide" loading="lazy">
                     </div>
                     <button class="slider-btn prev-btn">&larr;</button>
                     <button class="slider-btn next-btn">&rarr;</button>
@@ -196,74 +194,77 @@
                     <h2 class="loc-title">THE HOUSE</h2>
                     <div class="loc-badge">CARRER DE ROGER DE FLOR 252</div>
                     <p class="loc-desc">El nuevo spot. Más espacio, la misma vibra, ideal para acompañar tus empanadas con birra.</p>
-                    <div class="loc-map-container" style="pointer-events:none;">
+                    <div class="loc-map-container">
                         <iframe src="https://maps.google.com/maps?q=Carrer+de+Roger+de+Flor+252,+Barcelona&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     </section>
 
     <!-- 3. MERCHANDISING -->
     <section class="section-merch">
-        <div class="container" style="position:relative; z-index:2;">
-            <div class="merch-header">
-                <h2 class="merch-title">SUPPORT YOUR LOCAL<br>EMPANADA SHOP</h2>
+    <div class="container" style="position:relative; z-index:2;">
+        <div class="merch-header" style="text-align: center; margin-bottom: 3rem;">
+            <h2 class="merch-title">SUPPORT YOUR LOCAL<br>EMPANADA SHOP</h2>
+            <div class="merch-global-pill mono-text" style="display: inline-block; background: var(--bg-dark); color: var(--bg-white); font-size: 0.75rem; letter-spacing: 0.05em; padding: 6px 16px; border-radius: 999px; margin-top: 1rem;">
+                CONSULTÁ POR TALLES EN EL LOCAL O POR WHATSAPP
             </div>
-            <div class="merch-grid">
-                <div class="merch-card">
-                    <div class="merch-img-wrapper">
-                        <img src="merch/merch.png" alt="T-Shirt BLDS STAFF">
-                    </div>
-                    <div class="merch-info mono-text">
-                        <span>T-SHIRT STAFF</span>
-                        <span>€25</span>
-                    </div>
+        </div>
+        <div class="merch-grid">
+            <div class="merch-card">
+                <div class="merch-img-wrapper">
+                    <img src="merch/merch3.jpg" alt="T-Shirt BLDS STAFF" loading="lazy">
                 </div>
-                <div class="merch-card">
-                    <div class="merch-img-wrapper">
-                        <img src="merch/merch3.jpg" alt="Cap Rancheo Club">
-                    </div>
-                    <div class="merch-info mono-text">
-                        <span>CAP RANCHEO</span>
-                        <span>€18</span>
-                    </div>
+                <div class="merch-info mono-text">
+                    <span>T-SHIRT STAFF</span>
+                    <span>€25</span>
                 </div>
-                <div class="merch-card">
-                    <div class="merch-img-wrapper">
-                        <img src="merch/merch5.webp" alt="T-Shirt Stay Bonees">
-                    </div>
-                    <div class="merch-info mono-text">
-                        <span>T-SHIRT BONEES</span>
-                        <span>€25</span>
-                    </div>
+            </div>
+            <div class="merch-card">
+                <div class="merch-img-wrapper">
+                    <img src="merch/merch.webp" alt="T-Shirt Stay Bonees" loading="lazy">
+                </div>
+                <div class="merch-info mono-text">
+                    <span>T-SHIRT BONEES</span>
+                    <span>€35</span>
+                </div>
+            </div>
+            <div class="merch-card">
+                <div class="merch-img-wrapper">
+                    <img src="merch/merch5.webp" alt="Cap Rancheo Club" loading="lazy">
+                </div>
+                <div class="merch-info mono-text">
+                    <span>CAP RANCHEO</span>
+                    <span>€18</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- SEPARADOR VISUAL -->
     <div class="brand-divider full-width-banner">
-        <img src="branding/rancheo logos.webp" alt="Rancheo Logos">
+        <img src="branding/rancheo logos.webp" alt="Rancheo Logos" loading="lazy">
     </div>
 
     <!-- SOBRE NOSOTROS -->
     <section class="section-about" id="nosotros">
         <div class="about-text">
-            <img src="ilustraciones/ilustraciones y recursos 2.png" alt="Ilustración" class="floating-ilus ilus-1">
-            <img src="ilustraciones/ilustraciones y recursos 6.png" alt="Ilustración" class="floating-ilus ilus-2">
+            <img src="ilustraciones/ilustraciones y recursos 2.png" alt="Ilustración" class="floating-ilus ilus-1" loading="lazy">
+            <img src="ilustraciones/ilustraciones y recursos 6.png" alt="Ilustración" class="floating-ilus ilus-2" loading="lazy">
             <h2 class="about-title manifesto-title">LA MASA<br>ES NUESTRA<br>RELIGIÓN.</h2>
             <p class="about-desc">No somos solo empanadas. Somos el resultado de amasar, probar y ranchar todos los días. Nacimos en Barcelona con alma argentina, trayendo ese producto sincero, hecho a mano, para acompañar una birra fría al final del día. Ese espacio para relajarse y disfrutar de la compañía de otros sin prisas.</p>
             <a href="#menu" class="btn-primary pill-btn" style="align-self: flex-start;">NUESTRO MENÚ</a>
         </div>
         <div class="about-image">
-            <img src="fotos marca/Empanada.png" alt="Empanada La Baldosa" style="object-fit: cover; width: 100%; height: 100%;">
+            <img src="fotos marca/Empanada.png" alt="Empanada La Baldosa" style="object-fit: cover; width: 100%; height: 100%;" loading="lazy">
         </div>
     </section>
 
     <!-- OPINIONES -->
     <section class="section-reviews">
-        <img src="ilustraciones/ilustraciones y recursos 9.png" alt="Ilustración" class="floating-ilus ilus-3">
+        <img src="ilustraciones/ilustraciones y recursos 9.png" alt="Ilustración" class="floating-ilus ilus-3" loading="lazy">
         <div class="container">
             <div class="reviews-header">
                 <h2 class="reviews-title">QUÉ DICEN LOS QUE RANCHEAN</h2>
@@ -293,32 +294,36 @@
 
     <!-- 6. INSTAGRAM FEED EDITORIAL -->
     <section class="ig-feed-section">
-        <div class="container">
-            <h2 class="ig-title">NUESTRO FEED</h2>
-            <div class="ig-grid">
-                <!-- Using block anchors to simulate an external feed layout -->
-                <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
-                    <img src="fotos marca/BLDA1.png" alt="IG Post 1">
-                    <div class="ig-overlay"><span>VER EN IG</span></div>
-                </a>
-                <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
-                    <img src="fotos marca/BLDA2.png" alt="IG Post 2">
-                    <div class="ig-overlay"><span>VER EN IG</span></div>
-                </a>
-                <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
-                    <img src="fotos marca/BLDA10.png" alt="IG Post 3">
-                    <div class="ig-overlay"><span>VER EN IG</span></div>
-                </a>
-                <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
-                    <img src="fotos marca/BLDA11.png" alt="IG Post 4">
-                    <div class="ig-overlay"><span>VER EN IG</span></div>
-                </a>
-            </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="btn-primary pill-btn" style="background: var(--brand-green); color: white;">SEGUINOS EN @LABALDOSA.BCN</a>
-            </div>
+    <div class="container">
+        <div class="ig-header" style="text-align: center; margin-bottom: 2rem;">
+            <h2 class="ig-title" style="margin-bottom: 0.5rem;">NUESTRO FEED</h2>
+            <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-handle mono-text" style="color: var(--text-dark); text-decoration: none; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; opacity: 0.8;">@labaldosabcn ↗</a>
         </div>
-    </section>
+        <div class="ig-grid">
+            <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
+                <img src="fotos marca/BLDA1.webp" alt="IG Post 1" loading="lazy">
+                <div class="ig-overlay"><span>VER EN IG ↗</span></div>
+            </a>
+            <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
+                <img src="fotos marca/BLDA2.webp" alt="IG Post 2" loading="lazy">
+                <div class="ig-overlay"><span>VER EN IG ↗</span></div>
+            </a>
+            <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
+                <img src="fotos marca/BLDA10.webp" alt="IG Post 3" loading="lazy">
+                <div class="ig-overlay"><span>VER EN IG ↗</span></div>
+            </a>
+            <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="ig-item">
+                <img src="fotos marca/BLDA11.webp" alt="IG Post 4" loading="lazy">
+                <div class="ig-overlay"><span>VER EN IG ↗</span></div>
+            </a>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://www.instagram.com/labaldosabcn/" target="_blank" class="btn-outline pill-btn" style="border: 2px solid var(--text-dark); color: var(--text-dark); background: transparent; font-weight: 700; display: inline-block; padding: 0.6rem 2rem; text-decoration: none;">SEGUINOS EN INSTAGRAM</a>
+        </div>
+    </div>
+</section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="site-footer">

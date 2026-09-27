@@ -2,6 +2,26 @@
    LA BALDOSA - CONCEPTUAL EDITORIAL DESIGN
    ========================================= */
 :root {
+    /* 8pt Grid System Variables */
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 24px;
+    --spacing-6: 32px;
+    --spacing-7: 48px;
+    --spacing-8: 64px;
+    --spacing-9: 96px;
+
+    --gap-xs: var(--spacing-1);
+    --gap-sm: var(--spacing-2);
+    --gap-md: var(--spacing-4);
+    --gap-lg: var(--spacing-5);
+    --gap-xl: var(--spacing-6);
+
+    --card-padding: var(--spacing-4);
+    --badge-offset: var(--spacing-3);
+
     --bg-dark: #121212;
     --bg-light: #FBFBFA;
     --bg-white: #FFFFFF;
@@ -107,7 +127,6 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .tf-bottom-left { bottom: 1.5rem; left: 1.5rem; }
 .tf-bottom-right { bottom: 1.5rem; right: 1.5rem; text-align: right; }
 
-
 /* =========================================
    0. NAVBAR SUPERIOR
    ========================================= */
@@ -168,24 +187,6 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
 .nav-branch-pill span.active {
     background: var(--text-dark);
     color: var(--bg-white);
-}
-
-.nav-status-pill {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: #E8F5E9;
-    color: var(--brand-green);
-    padding: 0.5rem 1rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    font-family: var(--font-mono);
-}
-.status-dot {
-    width: 8px; height: 8px;
-    background: var(--brand-green);
-    border-radius: 50%;
 }
 
 .pill-btn {
@@ -1479,7 +1480,6 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
     align-items: flex-start;
 }
 
-
 /* =========================================
    UPDATES 4 (DESKTOP TICKET FIX & HERO CTA)
    ========================================= */
@@ -1602,4 +1602,836 @@ h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .menu-price {
         z-index: 101 !important;
         position: relative !important;
     }
+}
+
+/* =========================================
+   UI/UX NORMALIZATION & 8PT GRID REFACTOR
+   ========================================= */
+
+/* 1. Global Reset & Spacing Enforcement */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enforce 8pt Grid Gaps */
+.merch-grid, .loc-grid, .reviews-grid, .menu-list-grid, .ig-grid, .category-filters {
+    gap: var(--gap-lg) !important;
+}
+
+.container {
+    padding: 0 var(--spacing-5);
+}
+
+/* 2. Component & Cards Normalization (Pixel Perfect) */
+.merch-card, .review-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    position: relative !important;
+    padding: var(--card-padding) !important;
+    background: var(--bg-white);
+}
+
+.loc-block {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    position: relative !important;
+    padding: 0 !important;
+}
+
+.loc-info {
+    padding: var(--card-padding) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
+
+/* Image Aspect Ratios (1:1 for generic, 4:3 for locales) */
+.merch-img-wrapper {
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin-bottom: var(--spacing-3) !important;
+    height: auto !important;
+}
+
+.loc-image-slider {
+    width: 100% !important;
+    aspect-ratio: 4 / 3 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    height: auto !important;
+}
+
+.merch-img-wrapper img, .loc-image-slider img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    position: absolute !important;
+    top: 0 !important; 
+    left: 0 !important;
+}
+
+/* Badges Alignment */
+.merch-badge, .loc-badge {
+    position: absolute !important;
+    top: var(--badge-offset) !important;
+    right: var(--badge-offset) !important;
+    z-index: 10 !important;
+    margin: 0 !important;
+    background: var(--bg-dark) !important;
+    color: var(--bg-white) !important;
+    padding: var(--spacing-1) var(--spacing-2) !important;
+    border-radius: var(--spacing-1) !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase !important;
+    font-family: var(--font-mono) !important;
+    font-weight: 600 !important;
+}
+
+/* Card Content & Bottom Alignment */
+.merch-info, .review-card, .loc-info {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
+
+.merch-text-link, .quantity-stepper, .loc-map-container, .review-author {
+    margin-top: auto !important;
+}
+
+.merch-info span:first-child, .review-text, .loc-title {
+    margin-bottom: var(--spacing-2) !important;
+}
+
+/* 3. Consistency of Microcopy & Actions */
+a, button, .btn-primary, .capsule-btn, .stepper-btn, .merch-text-link {
+    transition: transform 0.2s ease, opacity 0.2s ease, outline 0.2s ease, color 0.2s ease !important;
+}
+
+a:hover, button:hover, .btn-primary:hover, .capsule-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+a:active, button:active, .btn-primary:active {
+    transform: translateY(0);
+}
+
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--brand-green) !important;
+    outline-offset: 4px !important;
+}
+
+.merch-text-link {
+    display: inline-block !important;
+    padding-top: var(--spacing-3) !important;
+    color: var(--text-dark) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 4px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    font-family: var(--font-body) !important;
+}
+
+.merch-text-link:hover {
+    color: var(--brand-green) !important;
+}
+
+/* Navigation Overrides to remove redundant margins */
+.nav-center, .nav-right {
+    gap: var(--spacing-5) !important;
+}
+
+/* Hero Button Fix (Mas arriba y mas a la derecha) */
+.hero-buttons-overlay {
+    /* top override removed */
+    bottom: auto !important;
+    left: auto !important;
+    right: 15% !important;
+    transform: none !important;
+    width: auto !important;
+    justify-content: flex-end !important;
+    display: flex !important;
+}
+
+@media (max-width: 768px) {
+    .hero-buttons-overlay {
+        top: 20% !important;
+        right: 10% !important;
+    }
+}
+\n
+/* =========================================
+   MERCH & IG FEED UX UPDATES
+   ========================================= */
+
+/* Merch Card Fixes */
+.merch-info {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-top: 1rem !important;
+}
+
+.merch-info span {
+    margin: 0 !important;
+}
+
+.merch-badge {
+    display: none !important; /* Hide old badges if any remain */
+}
+
+/* Button Outline Hover */
+.btn-outline:hover {
+    background: var(--text-dark) !important;
+    color: var(--cream) !important;
+    transform: translateY(-2px);
+}
+
+/* IG Feed Responsive Layout */
+.ig-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: var(--spacing-4) !important;
+}
+
+.ig-overlay {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.ig-item:hover img {
+    transform: scale(1.03) !important;
+}
+
+@media (max-width: 991px) {
+    .ig-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .ig-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        padding-bottom: 1rem !important;
+        -webkit-overflow-scrolling: touch !important;
+        margin-left: calc(var(--spacing-5) * -1) !important;
+        margin-right: calc(var(--spacing-5) * -1) !important;
+        padding-left: var(--spacing-5) !important;
+        padding-right: var(--spacing-5) !important;
+    }
+    
+    .ig-item {
+        flex: 0 0 75% !important;
+        scroll-snap-align: center !important;
+    }
+    
+    .ig-grid::-webkit-scrollbar {
+        display: none !important;
+    }
+}
+\n
+/* =========================================
+   UI/UX HERO & NAVBAR REDESIGN
+   ========================================= */
+
+/* Hero Button Positioning */
+.hero-buttons-overlay {
+    position: absolute !important;
+    top: 55% !important; /* Centered visually under the logo on the image */
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, 0) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.hero-main-btn {
+    margin-top: 24px !important;
+    min-height: 48px !important;
+    padding: 0 32px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1rem !important;
+}
+
+@media (max-width: 768px) {
+    .hero-buttons-overlay {
+        top: 60% !important; /* Slightly lower on mobile to clear the composition */
+    }
+}
+
+/* Navbar Redesign */
+.premium-navbar {
+    background-color: #004D2C !important;
+    border-bottom: none !important;
+}
+
+.nav-center {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.nav-center a {
+    color: #F5F5F0 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.premium-navbar .nav-right .btn-primary {
+    background-color: #F5F5F0 !important;
+    color: #004D2C !important;
+    border: none !important;
+    font-weight: 700 !important;
+}
+
+.premium-navbar .nav-right .btn-primary:hover {
+    background-color: #FFFFFF !important;
+}
+
+.nav-logo-img img {
+    filter: brightness(0) invert(0.96) sepia(0.05) hue-rotate(180deg) !important;
+}
+
+/* Fix mobile menu trigger color */
+.nav-mobile-trigger span {
+    color: #F5F5F0 !important;
+}
+\n
+/* =========================================
+   UI/UX ITERATION: NAVBAR, CARDS & HERO
+   ========================================= */
+
+/* Navbar Transparent */
+.premium-navbar {
+    background-color: transparent !important;
+}
+
+.premium-navbar.scrolled {
+    background-color: #004D2C !important; /* Solid on scroll for readability */
+}
+
+/* Empanada Cards (Product Cards) Unification */
+.product-card {
+    border-radius: 12px !important; /* Unificar bordes de la card */
+    overflow: hidden !important;
+}
+
+img.product-card-img {
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important; /* Unificar tamaños de imagenes */
+    object-fit: cover !important;
+    border-radius: 12px !important; /* Mismas esquinas */
+    display: block !important;
+    margin-bottom: var(--spacing-3) !important;
+}
+
+/* Hero Button Repositioning (Mas arriba y mas a la izquierda) */
+.hero-buttons-overlay {
+    top: 48% !important; /* Mas arriba */
+    left: 46% !important; /* Mas a la izquierda */
+}
+
+@media (max-width: 768px) {
+    .hero-buttons-overlay {
+        top: 52% !important;
+        left: 50% !important; /* Mantener centrado en mobile para no desbalancear */
+    }
+}
+\n
+/* =========================================
+   UI/UX ITERATION: GLASSMORPHISM & FULL HERO
+   ========================================= */
+
+/* 1. Navbar Glassmorphism */
+.premium-navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    background: transparent !important;
+    border-bottom: none !important;
+    transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.premium-navbar.scrolled {
+    background: rgba(0, 77, 44, 0.85) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 2. Nav Links & CTA Styling for both states */
+.nav-center a {
+    color: #F5F5F0 !important; /* Marfil/Blanco roto */
+}
+
+/* Initial state for CTA (Outline Blanco) */
+.premium-navbar .nav-right .btn-primary {
+    background: transparent !important;
+    color: #F5F5F0 !important;
+    border: 2px solid #F5F5F0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.premium-navbar .nav-right .btn-primary:hover {
+    background: #F5F5F0 !important;
+    color: #004D2C !important;
+}
+
+/* Scrolled state for CTA (Fondo Marfil, texto Verde) */
+.premium-navbar.scrolled .nav-right .btn-primary {
+    background: #F5F5F0 !important;
+    color: #004D2C !important;
+    border: 2px solid #F5F5F0 !important;
+}
+
+.premium-navbar.scrolled .nav-right .btn-primary:hover {
+    background: #FFFFFF !important;
+}
+
+/* 3. Ajustes en el Hero (Full Height) */
+.photo-hero {
+    margin-top: 0 !important;
+    height: 100vh !important;
+}
+
+/* Ajustar el logo y mobile trigger para que contrasten */
+.nav-logo-img img {
+    filter: brightness(0) invert(0.96) sepia(0.05) hue-rotate(180deg) !important;
+}
+
+.nav-mobile-trigger span {
+    color: #F5F5F0 !important;
+}
+\n
+/* =========================================
+   UI/UX FINAL POLISH: NAVBAR & HERO
+   ========================================= */
+
+/* 1. Navbar Permanent Glassmorphism */
+.premium-navbar, .premium-navbar.scrolled {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+.nav-container {
+    padding: 10px 24px !important;
+    height: auto !important;
+    min-height: 60px !important;
+}
+
+@media (min-width: 992px) {
+    .nav-container {
+        padding: 12px 32px !important;
+        min-height: 64px !important;
+    }
+}
+
+/* 2. Logo Fix (Original colors, proper height) */
+.nav-logo-img {
+    display: flex !important;
+    align-items: center !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+}
+
+.nav-logo-img img {
+    filter: none !important; /* Restore original logo colors */
+    max-height: 40px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    display: block !important;
+}
+
+/* 3. Hero Bottom Green Stripe Fix */
+.photo-hero {
+    background: transparent !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important; /* Let image dictate height */
+    min-height: auto !important;
+}
+
+.hero-picture {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.photo-hero .hero-img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    vertical-align: bottom !important; /* Removes ghost inline space */
+}
+
+/* Update text links for better visibility against light glassmorphism */
+/* Since it's a white glassmorphism, white text might blend in if the image is light.
+   We will keep it off-white but add a subtle text-shadow for perfect contrast anywhere. */
+.nav-center a, .nav-mobile-trigger span {
+    color: #F5F5F0 !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+    font-weight: 700 !important;
+}
+
+/* Button CTA Solid Green for contrast */
+.premium-navbar .nav-right .btn-primary, .premium-navbar.scrolled .nav-right .btn-primary {
+    background: #004D2C !important;
+    color: #F5F5F0 !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+.premium-navbar .nav-right .btn-primary:hover {
+    background: #111111 !important;
+}
+\n
+/* Black Glassmorphism Navbar Update */
+.premium-navbar, .premium-navbar.scrolled {
+    background: rgba(0, 0, 0, 0.4) !important; /* Negro transparente */
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+\n
+/* =========================================
+   UI/UX ITERATION: BUTTON COLOR & NAVBAR HEIGHT
+   ========================================= */
+
+/* Button PEDÍ: White with green letters */
+.premium-navbar .nav-right .btn-primary, 
+.premium-navbar.scrolled .nav-right .btn-primary {
+    background-color: #FFFFFF !important;
+    color: #004D2C !important;
+    border: none !important;
+    font-weight: 800 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+.premium-navbar .nav-right .btn-primary:hover, 
+.premium-navbar.scrolled .nav-right .btn-primary:hover {
+    background-color: #F0F0F0 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Navbar Height: Slightly taller */
+.nav-container {
+    padding: 14px 24px !important;
+    min-height: 68px !important;
+}
+
+@media (min-width: 992px) {
+    .nav-container {
+        padding: 16px 32px !important;
+        min-height: 76px !important;
+    }
+}
+\n
+/* =========================================
+   STRICT OVERRIDES: WHITE GLASSMORPHISM & HERO CTA
+   ========================================= */
+
+/* 1. NAVBAR (GLASSMORPHISM REAL BLANCO) */
+.premium-navbar, .premium-navbar.scrolled {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 999 !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    height: 64px !important;
+    min-height: 64px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 32px !important;
+}
+
+.nav-container {
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    max-width: 1600px !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 768px) {
+    .premium-navbar, .premium-navbar.scrolled {
+        padding: 0 16px !important;
+    }
+}
+
+/* 2. LOGO */
+.nav-logo-img img {
+    height: 38px !important;
+    max-height: 38px !important;
+    width: auto !important;
+    display: block !important;
+}
+
+/* 3. CTA CENTRAL EN EL HERO */
+.hero-buttons-overlay {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: 72% !important;
+    width: auto !important;
+    display: block !important;
+    margin: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+.hero-main-btn, .hero-cta-btn {
+    background: #004D2C !important;
+    color: #FFFFFF !important;
+    border: 1.5px solid #FFFFFF !important;
+    border-radius: 999px !important;
+    padding: 12px 36px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    margin-top: 0 !important;
+    min-height: auto !important;
+    box-shadow: none !important;
+}
+
+.hero-main-btn:hover, .hero-cta-btn:hover {
+    background: #FFFFFF !important;
+    color: #004D2C !important;
+    transform: scale(1.02) !important;
+}
+\n
+/* =========================================
+   NAVBAR: LOGO, SPACING & MAIN BUTTON
+   ========================================= */
+
+/* Adjusting lateral spacing for symmetry */
+.premium-navbar, .premium-navbar.scrolled {
+    padding: 0 40px !important;
+}
+
+@media (max-width: 768px) {
+    .premium-navbar, .premium-navbar.scrolled {
+        padding: 0 24px !important;
+    }
+}
+
+/* Ensure container spans full width to push items to the padded edges */
+.nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+/* Bigger Logo */
+.nav-logo-img img {
+    height: 46px !important;
+    max-height: 46px !important;
+    width: auto !important;
+    display: block !important;
+}
+
+/* Main Navbar Button ("PEDÍ") - The True Primary CTA */
+.premium-navbar .nav-right .btn-primary {
+    background: #FFFFFF !important;
+    color: #004D2C !important;
+    border: 2px solid #FFFFFF !important;
+    font-weight: 900 !important;
+    padding: 10px 32px !important;
+    border-radius: 999px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15) !important;
+}
+
+.premium-navbar .nav-right .btn-primary:hover {
+    background: #004D2C !important;
+    color: #FFFFFF !important;
+    transform: scale(1.05) translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2) !important;
+}
+\n
+/* =========================================
+   STRICT NAVBAR PADDING & CENTERING FIX
+   ========================================= */
+
+.premium-navbar, .premium-navbar.scrolled {
+    box-sizing: border-box !important;
+    padding: 14px 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important; /* Center the inner container */
+    width: 100% !important;
+}
+
+@media (min-width: 1200px) {
+    .premium-navbar, .premium-navbar.scrolled {
+        padding: 16px 64px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-navbar, .premium-navbar.scrolled {
+        padding: 12px 20px !important;
+    }
+}
+
+.nav-container {
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: 1400px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+/* Ensure no negative margins push items off screen */
+.nav-left, .nav-logo-img, .nav-right, .nav-center, .nav-right .btn-primary {
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================
+   LA BALDOSA - PERFECT CREAM NAVBAR
+   ========================================= */
+
+.premium-navbar, .premium-navbar.scrolled {
+    background: #F5F5F0 !important; /* Cream */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid rgba(0, 77, 44, 0.1) !important;
+    height: 72px !important;
+    min-height: 72px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    box-sizing: border-box !important;
+    padding: 0 48px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+@media (min-width: 1200px) {
+    .premium-navbar, .premium-navbar.scrolled { padding: 0 64px !important; }
+}
+@media (max-width: 768px) {
+    .premium-navbar, .premium-navbar.scrolled { padding: 0 20px !important; }
+}
+
+.nav-container {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: 1400px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+.nav-logo-img img {
+    height: 48px !important;
+    max-height: 48px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    filter: none !important; /* ORIGINAL GREEN */
+}
+
+/* Original Typography */
+.nav-center a {
+    color: #111111 !important;
+    text-decoration: none !important;
+    transition: opacity 0.3s ease !important;
+    line-height: normal !important;
+    margin: 0 15px !important;
+    /* Reset any previous bold/spacing overrides */
+    font-weight: bold !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+}
+
+.premium-navbar .nav-right .btn-primary, 
+.premium-navbar.scrolled .nav-right .btn-primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #004D2C !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 999px !important;
+    padding: 0 24px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    transition: transform 0.3s ease !important;
+    box-shadow: none !important;
+    height: 40px !important; 
+    line-height: 1 !important;
+    margin: 0 !important;
+}
+
+.premium-navbar .nav-right .btn-primary:hover, 
+.premium-navbar.scrolled .nav-right .btn-primary:hover {
+    transform: scale(1.05) !important;
+    background-color: #00361f !important;
+}
+
+.nav-mobile-trigger span { color: #004D2C !important; }
+
+/* FIX EMPANADAS CROPPING */
+.category-filters {
+    padding: 8px 4px !important; 
+    overflow-y: visible !important;
+    height: auto !important; 
+}
+.capsule-btn:hover {
+    transform: translateY(-1px) !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
 }

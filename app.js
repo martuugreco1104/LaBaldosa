@@ -138,7 +138,6 @@ function setupEventListeners() {
             showSlide(currentIdx);
         });
 
-        
     });
 
         // Formulario de validación
@@ -215,13 +214,7 @@ function setupEventListeners() {
 
     // Navbar Scroll Effect
     const navbar = document.querySelector('.premium-navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    /* window.addEventListener('scroll', ... ) removed for permanent glassmorphism */
 }
 
 function updateQuantity(id, change) {
@@ -342,11 +335,17 @@ function handleCheckout() {
         }
     });
 
-    let message = `Pedido La Baldosa\n\n`;
+    let message = `Pedido La Baldosa
+
+`;
     message += `📍 Retiro: ${branchText}\n`;
-    message += `📦 Entrega: ${deliveryText}\n\n`;
+    message += `📦 Entrega: ${deliveryText}
+
+`;
     message += `🥟 Detalle:\n${itemsText}\n`;
-    message += `Total: €${totalPrice.toFixed(2)} (${totalQty} unid.)\n\n`;
+    message += `Total: €${totalPrice.toFixed(2)} (${totalQty} unid.)
+
+`;
     message += `👤 Nombre: ${name}\n`;
     
     if (notes) {
