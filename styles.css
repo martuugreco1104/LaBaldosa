@@ -2473,7 +2473,7 @@ img.product-card-img {
     .hero-buttons-overlay {
         position: absolute !important;
         top: auto !important;
-        bottom: 8% !important; /* Centrado en el bloque verde inferior del hero mobile */
+        bottom: 2% !important; /* Movido un poco más abajo */
         left: 50% !important;
         transform: translateX(-50%) !important;
         width: 100% !important;
@@ -2495,35 +2495,48 @@ img.product-card-img {
     }
 
     /* 3. CARDS DE EMPANADAS ("RECIÉN SALIDAS") EN MOBILE */
+    .menu-list {
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+
     .product-card {
-        display: grid !important;
-        grid-template-columns: 60px 1fr auto !important;
-        gap: 12px !important;
+        display: flex !important;
+        flex-direction: row !important;
         align-items: center !important;
-        padding: 12px 14px !important;
-        text-align: left !important;
-        height: auto !important;
+        justify-content: space-between !important;
+        padding: 12px !important;
+        gap: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
         border-radius: 12px !important;
+        overflow: hidden !important; /* Prevent anything from bleeding out */
     }
     
     .product-card-img {
-        width: 60px !important;
-        height: 60px !important;
+        flex: 0 0 65px !important;
+        width: 65px !important;
+        height: 65px !important;
         margin: 0 !important;
         border-radius: 8px !important;
+        object-fit: cover !important;
     }
     
     .product-info {
+        flex: 1 1 auto !important;
+        min-width: 0 !important; /* Critical for flex child text truncation */
         display: flex !important;
         flex-direction: column !important;
-        justify-content: center !important;
         align-items: flex-start !important;
+        justify-content: center !important;
     }
     
     .product-title {
         font-size: 14px !important;
         margin-bottom: 4px !important;
         font-weight: 700 !important;
+        white-space: normal !important;
     }
     
     .product-desc {
@@ -2531,9 +2544,14 @@ img.product-card-img {
         line-height: 1.3 !important;
         margin-bottom: 0 !important;
         color: #555 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
     }
     
     .product-action {
+        flex: 0 0 auto !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-end !important;
@@ -2549,8 +2567,20 @@ img.product-card-img {
     }
     
     .qty-control {
-        margin-top: 0 !important;
-        transform: scale(0.9);
-        transform-origin: right center;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        transform: none !important; /* Remove scaling that causes glitches */
+    }
+
+    .qty-btn {
+        width: 32px !important;
+        height: 32px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        font-size: 16px !important;
     }
 }
+
