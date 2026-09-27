@@ -2844,3 +2844,65 @@ img.product-card-img {
         width: auto !important;
     }
 }
+
+
+/* =========================================
+   USER SPECIFIC MOBILE FIXES
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* FIX CARDS CORTADAS DEL LADO DERECHO */
+    /* Remove padding from parent container to avoid double padding */
+    .ordering-experience .container.pos-container {
+        padding: 0 !important;
+    }
+
+    .order-split, .pos-split, .menu-column-left, .pos-menu {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .menu-list {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px !important; /* Exact padding requested */
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+    }
+
+    .menu-card.product-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 10px 12px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .product-card-info {
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
+        margin-right: 8px !important;
+    }
+
+    .stepper.quantity-stepper {
+        flex-shrink: 0 !important;
+    }
+
+    /* FIX MENÚ HAMBURGUESA EN MOBILE */
+    .mobile-nav, #nav-center, #nav-right {
+        z-index: 1000 !important;
+    }
+}
+
+/* FIX MODAL "TU PEDIDO" BOTON FLOTANTE */
+body.drawer-open #mobile-cart-bar {
+    display: none !important;
+}
