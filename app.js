@@ -1,18 +1,20 @@
 // Datos del menú
 const menuItems = [
-    { id: 1, name: "4 Quesos", category: "Clásicas", desc: "Mezcla de cuatro quesos fundidos.", price: 3.50, img: "empanadas/BLDA6.png" },
-    { id: 2, name: "Jamón y Queso", category: "Clásicas", desc: "Clásica de jamón cocido y queso mozzarella.", price: 3.50, img: "empanadas/BLDA4.png" },
-    { id: 3, name: "Cebolla y Queso", category: "Clásicas", desc: "Cebolla caramelizada y mucho queso.", price: 3.50, img: "empanadas/BLDA3.png" },
-    { id: 4, name: "Pollo", category: "Clásicas", desc: "Pollo jugoso con especias suaves.", price: 3.50, img: "empanadas/BLDA14.png" },
-    { id: 5, name: "Humita", category: "Vegetarianas", desc: "Choclo cremoso tradicional.", price: 3.50, img: "empanadas/BLDA7.png" },
-    { id: 6, name: "Roquefort y Jamón", category: "Especiales", desc: "El toque fuerte del roquefort con jamón.", price: 3.50, img: "empanadas/BLDA14.png" },
-    { id: 7, name: "Zeitan Beef", category: "Vegetarianas", desc: "Alternativa vegana con mucho sabor.", price: 3.50, img: "empanadas/BLDA6.png" },
-    { id: 8, name: "Caprese", category: "Vegetarianas", desc: "Queso, tomate y albahaca fresca.", price: 3.50, img: "empanadas/BLDA7.png" },
-    { id: 9, name: "Vacío y Provoleta", category: "Especiales", desc: "Vacío desmechado, provoleta fundida.", price: 3.50, img: "empanadas/BLDA4.png" },
-    { id: 10, name: "Dulce de Leche", category: "Especiales", desc: "Empanada dulce tradicional.", price: 3.50, img: "empanadas/BLDA6.png" },
-    { id: 11, name: "Nutella y Brownie", category: "Especiales", desc: "Bomba dulce de chocolate.", price: 3.50, img: "empanadas/BLDA3.png" },
-    { id: 12, name: "Estrella Galicia", category: "Bebidas", desc: "Cerveza, lata 330ml.", price: 2.00, img: "empanadas/BLDA14.png" },
-    { id: 13, name: "Vermú", category: "Bebidas", desc: "Vermú de la casa.", price: 2.70, img: "empanadas/BLDA7.png" }
+    { id: 1, name: "4 Quesos", category: "Clásicas", desc: "Mezcla de cuatro quesos fundidos.", price: 3.50, img: "empanadas/BLDA6.webp" },
+    { id: 2, name: "Jamón y Queso", category: "Clásicas", desc: "Clásica de jamón cocido y queso mozzarella.", price: 3.50, img: "empanadas/BLDA4.webp" },
+    { id: 3, name: "Cebolla y Queso", category: "Clásicas", desc: "Cebolla caramelizada y mucho queso.", price: 3.50, img: "empanadas/BLDA3.webp" },
+    { id: 4, name: "Pollo", category: "Clásicas", desc: "Pollo jugoso con especias suaves.", price: 3.50, img: "empanadas/BLDA14.webp" },
+    { id: 5, name: "Humita", category: "Vegetarianas", desc: "Choclo cremoso tradicional.", price: 3.50, img: "empanadas/BLDA7.webp" },
+    { id: 6, name: "Roquefort y Jamón", category: "Especiales", desc: "El toque fuerte del roquefort con jamón.", price: 3.50, img: "empanadas/BLDA14.webp" },
+    { id: 7, name: "Zeitan Beef", category: "Vegetarianas", desc: "Alternativa vegana con mucho sabor.", price: 3.50, img: "empanadas/BLDA6.webp" },
+    { id: 8, name: "Caprese", category: "Vegetarianas", desc: "Queso, tomate y albahaca fresca.", price: 3.50, img: "empanadas/BLDA7.webp" },
+    { id: 9, name: "Vacío y Provoleta", category: "Especiales", desc: "Vacío desmechado, provoleta fundida.", price: 3.50, img: "empanadas/BLDA4.webp" },
+    { id: 10, name: "Dulce de Leche", category: "Especiales", desc: "Empanada dulce tradicional.", price: 3.50, img: "empanadas/BLDA6.webp" },
+    { id: 11, name: "Nutella y Brownie", category: "Especiales", desc: "Bomba dulce de chocolate.", price: 3.50, img: "empanadas/BLDA3.webp" },
+    { id: 12, name: "Estrella Galicia", category: "Bebidas", desc: "Cerveza, lata 330ml.", price: 2.00, img: "empanadas/BLDA14.webp" },
+    { id: 13, name: "Vermú", category: "Bebidas", desc: "Vermú de la casa.", price: 2.70, img: "empanadas/BLDA7.webp" },
+    { id: 14, name: "Pulled BBQ", category: "Especiales", desc: "Cerdo desmechado en cocción lenta con salsa barbacoa.", price: 3.50, img: "empanadas/BLDA4.webp" },
+    { id: 15, name: "Ternera Desmechada", category: "Clásicas", desc: "Carne de ternera suave desmechada y bien condimentada.", price: 3.50, img: "empanadas/BLDA3.webp" }
 ];
 
 // Estado global
