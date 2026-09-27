@@ -2435,3 +2435,122 @@ img.product-card-img {
     transform: translateY(-1px) !important;
     background-color: rgba(0, 0, 0, 0.05) !important;
 }
+
+
+/* =========================================
+   MOBILE UI OPTIMIZATIONS (<= 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. CABECERA MOBILE (NAVBAR) */
+    .premium-navbar, .premium-navbar.scrolled {
+        padding: 12px 20px !important;
+        height: 58px !important; 
+        min-height: 58px !important;
+    }
+    
+    .nav-logo-img img {
+        height: 34px !important;
+        max-height: 34px !important;
+    }
+    
+    .nav-center {
+        display: none !important;
+    }
+    
+    .nav-mobile-trigger {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 34px !important;
+        color: #111111 !important;
+    }
+    .nav-mobile-trigger svg {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    /* 2. BOTÓN "PEDÍ" EN EL HERO */
+    .hero-buttons-overlay {
+        position: absolute !important;
+        top: auto !important;
+        bottom: 8% !important; /* Centrado en el bloque verde inferior del hero mobile */
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        z-index: 10 !important;
+    }
+    
+    .hero-main-btn {
+        background-color: #004D2C !important;
+        color: #FFFFFF !important;
+        border-radius: 999px !important;
+        padding: 12px 32px !important;
+        font-weight: 800 !important;
+        font-size: 16px !important;
+        border: none !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+        letter-spacing: 1px !important;
+    }
+
+    /* 3. CARDS DE EMPANADAS ("RECIÉN SALIDAS") EN MOBILE */
+    .product-card {
+        display: grid !important;
+        grid-template-columns: 60px 1fr auto !important;
+        gap: 12px !important;
+        align-items: center !important;
+        padding: 12px 14px !important;
+        text-align: left !important;
+        height: auto !important;
+        border-radius: 12px !important;
+    }
+    
+    .product-card-img {
+        width: 60px !important;
+        height: 60px !important;
+        margin: 0 !important;
+        border-radius: 8px !important;
+    }
+    
+    .product-info {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+    }
+    
+    .product-title {
+        font-size: 14px !important;
+        margin-bottom: 4px !important;
+        font-weight: 700 !important;
+    }
+    
+    .product-desc {
+        font-size: 11.5px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0 !important;
+        color: #555 !important;
+    }
+    
+    .product-action {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        margin-top: 0 !important;
+    }
+    
+    .product-price {
+        font-size: 14px !important;
+        font-weight: 700 !important;
+        color: #111 !important;
+    }
+    
+    .qty-control {
+        margin-top: 0 !important;
+        transform: scale(0.9);
+        transform-origin: right center;
+    }
+}
