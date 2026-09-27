@@ -207,16 +207,27 @@ function setupEventListeners() {
     const navCenter = document.getElementById('nav-center');
     const navRight = document.getElementById('nav-right');
 
-    if (mobileMenuTrigger && navCenter && navRight) {
+    if (mobileMenuTrigger && navCenter) {
+        // Abrir el overlay al tocar hamburguesa
         mobileMenuTrigger.addEventListener('click', () => {
-            navCenter.classList.toggle('is-open');
-            navRight.classList.toggle('is-open');
+            navCenter.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
         });
 
-        document.querySelectorAll('#nav-center a, #nav-right a').forEach(link => {
+        // Cerrar con la X
+        const navCloseBtn = document.getElementById('nav-close-btn');
+        if (navCloseBtn) {
+            navCloseBtn.addEventListener('click', () => {
+                navCenter.classList.remove('is-open');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Cerrar al tocar cualquier link
+        document.querySelectorAll('#nav-center a').forEach(link => {
             link.addEventListener('click', () => {
                 navCenter.classList.remove('is-open');
-                navRight.classList.remove('is-open');
+                document.body.style.overflow = '';
             });
         });
     }
