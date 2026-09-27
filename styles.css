@@ -2608,3 +2608,149 @@ img.product-card-img {
         margin: 0 !important;
     }
 }
+
+
+/* =========================================
+   URGENT MOBILE FIXES REQUESTED BY USER
+   ========================================= */
+
+/* 1. Navbar Links Sin Sombra */
+.nav-center a {
+    text-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+    /* 1. FIX CRÍTICO: BOTÓN "PEDÍ" DEL HERO SE SALE VOLANDO */
+    .hero-buttons-overlay {
+        position: absolute !important;
+        top: 38% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: auto !important;
+        bottom: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        z-index: 10 !important;
+        pointer-events: auto !important;
+    }
+    
+    .hero-main-btn, 
+    .hero-main-btn:active, 
+    .hero-main-btn:focus, 
+    .hero-main-btn:hover {
+        background-color: #0A5C36 !important; /* Verde Institucional */
+        color: #FFFFFF !important;
+        border: none !important;
+        outline: none !important;
+        transform: none !important; /* NO PERMITIR QUE SE MUEVA NI VUELE */
+        transition: none !important; /* SIN ANIMACIÓN */
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    }
+
+    /* 2. FIX CONTENEDOR DEL MENÚ: CORRIDO A LA DERECHA */
+    .order-split,
+    .pos-split,
+    .menu-column-left,
+    .pos-menu,
+    .menu-list,
+    .pos-list {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* El contenedor interno sin extra padding */
+    .menu-list {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* 3. FIX PILLS / CATEGORÍAS: SCROLL HORIZONTAL FLUIDO */
+    .category-filters {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 8px !important;
+        padding: 4px 0px 12px 0px !important;
+        scrollbar-width: none !important; /* Firefox */
+        width: 100% !important;
+        justify-content: flex-start !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .category-filters::-webkit-scrollbar {
+        display: none !important; /* Chrome/Safari */
+    }
+    
+    .capsule-btn, .tab-btn {
+        flex-shrink: 0 !important;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 700 !important;
+        font-size: 13px !important;
+        letter-spacing: 0.05em !important;
+        box-shadow: none !important; /* Sin blur */
+    }
+    
+    .capsule-btn.active {
+        background-color: #121212 !important;
+        color: #FFFFFF !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* 4. CARDS COMPACTAS: VER MÁS SABORES DE UN PANTALLAZO */
+    .menu-card.product-card {
+        padding: 8px 12px !important; /* Padding reducido */
+        gap: 8px !important;
+        margin: 0 0 12px 0 !important; /* Menor separación entre cards */
+        min-height: auto !important;
+    }
+    
+    .menu-img.product-card-img {
+        width: 56px !important; /* Thumbnail de 56x56 */
+        height: 56px !important;
+        min-width: 56px !important;
+        flex: 0 0 56px !important;
+    }
+    
+    .product-card-info {
+        gap: 2px !important; /* Espaciado mínimo vertical */
+    }
+    
+    .menu-title.product-title {
+        font-size: 13.5px !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .menu-desc.product-description {
+        font-size: 11px !important;
+        margin-bottom: 0 !important;
+        line-height: 1.15 !important;
+    }
+    
+    .menu-price.product-price {
+        font-size: 12.5px !important;
+        color: #0A5C36 !important; /* Verde institucional */
+        margin-top: 1px !important;
+    }
+    
+    .stepper.quantity-stepper {
+        padding: 2px 6px !important;
+        height: 34px !important; /* Altura reducida */
+        min-height: 34px !important;
+    }
+    
+    .stepper-btn {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}

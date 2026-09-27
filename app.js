@@ -1,20 +1,44 @@
 // Datos del menú
 const menuItems = [
-    { id: 1, name: "4 Quesos", category: "Clásicas", desc: "Mezcla de cuatro quesos fundidos.", price: 3.50, img: "empanadas/BLDA6.webp" },
-    { id: 2, name: "Jamón y Queso", category: "Clásicas", desc: "Clásica de jamón cocido y queso mozzarella.", price: 3.50, img: "empanadas/BLDA4.webp" },
-    { id: 3, name: "Cebolla y Queso", category: "Clásicas", desc: "Cebolla caramelizada y mucho queso.", price: 3.50, img: "empanadas/BLDA3.webp" },
-    { id: 4, name: "Pollo", category: "Clásicas", desc: "Pollo jugoso con especias suaves.", price: 3.50, img: "empanadas/BLDA14.webp" },
-    { id: 5, name: "Humita", category: "Vegetarianas", desc: "Choclo cremoso tradicional.", price: 3.50, img: "empanadas/BLDA7.webp" },
-    { id: 6, name: "Roquefort y Jamón", category: "Especiales", desc: "El toque fuerte del roquefort con jamón.", price: 3.50, img: "empanadas/BLDA14.webp" },
-    { id: 7, name: "Zeitan Beef", category: "Vegetarianas", desc: "Alternativa vegana con mucho sabor.", price: 3.50, img: "empanadas/BLDA6.webp" },
-    { id: 8, name: "Caprese", category: "Vegetarianas", desc: "Queso, tomate y albahaca fresca.", price: 3.50, img: "empanadas/BLDA7.webp" },
-    { id: 9, name: "Vacío y Provoleta", category: "Especiales", desc: "Vacío desmechado, provoleta fundida.", price: 3.50, img: "empanadas/BLDA4.webp" },
-    { id: 10, name: "Dulce de Leche", category: "Especiales", desc: "Empanada dulce tradicional.", price: 3.50, img: "empanadas/BLDA6.webp" },
-    { id: 11, name: "Nutella y Brownie", category: "Especiales", desc: "Bomba dulce de chocolate.", price: 3.50, img: "empanadas/BLDA3.webp" },
-    { id: 12, name: "Estrella Galicia", category: "Bebidas", desc: "Cerveza, lata 330ml.", price: 2.00, img: "empanadas/BLDA14.webp" },
-    { id: 13, name: "Vermú", category: "Bebidas", desc: "Vermú de la casa.", price: 2.70, img: "empanadas/BLDA7.webp" },
-    { id: 14, name: "Pulled BBQ", category: "Especiales", desc: "Cerdo desmechado en cocción lenta con salsa barbacoa.", price: 3.50, img: "empanadas/BLDA4.webp" },
-    { id: 15, name: "Ternera Desmechada", category: "Clásicas", desc: "Carne de ternera suave desmechada y bien condimentada.", price: 3.50, img: "empanadas/BLDA3.webp" }
+    // CLÁSICAS
+    { id: 1, name: "Ternera Suave", category: "Clásicas", desc: "Carne de ternera picada, pimientos, cebolla, cebolla tierna, huevo duro, olivas verdes, comino y pimentón dulce.", price: 3.50, img: "empanadas/BLDA6.webp" },
+    { id: 2, name: "Ternera Picante", category: "Clásicas", desc: "Carne de ternera picada, pimientos, cebolla, cebolla tierna, huevo, olivas verdes, comino, pimentón dulce y ají molido picante.", price: 3.50, img: "empanadas/BLDA4.webp" },
+    { id: 3, name: "Pollo", category: "Clásicas", desc: "Pechuga de pollo, pimientos, tomate, cebolla tierna, huevo duro y pimentón dulce.", price: 3.50, img: "empanadas/BLDA14.webp" },
+    { id: 4, name: "Jamón y Queso", category: "Clásicas", desc: "Empanada rellena con jamón cocido natural, queso emmental, mozzarella, provolone, parmesano.", price: 3.50, img: "empanadas/BLDA3.webp" },
+    { id: 5, name: "Cebolla y Queso", category: "Clásicas", desc: "Cebollas caramelizadas, queso emmental, mozzarella, provolone, parmesano y cebollino.", price: 3.50, img: "empanadas/BLDA7.webp" },
+    
+    // ESPECIALES
+    { id: 6, name: "Vacío y Provoleta", category: "Especiales", desc: "Vacío tiernizado en larga cocción, con chimichurri, pimiento asado y provoleta.", price: 3.50, img: "empanadas/BLDA4.webp" },
+    { id: 7, name: "Ternera Malbec", category: "Especiales", desc: "Carne de ternera braseada, cebolla, puerro, setas y reducción de vino Malbec.", price: 3.50, img: "empanadas/BLDA6.webp" },
+    { id: 8, name: "Pulled Pork", category: "Especiales", desc: "Cerdo braseado, barbacoa, pimientos, cebolla, mango y bacon.", price: 3.50, img: "empanadas/BLDA14.webp" },
+    { id: 9, name: "Roquefort y Jamón", category: "Especiales", desc: "Roquefort, jamón cocido, mozzarella, provolone, emmental, parmesano, cebollas caramelizadas y cebollino.", price: 3.50, img: "empanadas/BLDA7.webp" },
+    { id: 10, name: "Setas y Pecorino", category: "Especiales", desc: "Champiñón, portobello, shiitakes y enokis, tomillo fresco, queso trufado y pecorino.", price: 3.50, img: "empanadas/BLDA3.webp" },
+    { id: 11, name: "Dulce de Leche", category: "Especiales", desc: "Bizcocho de tres leches, dulce de leche y merengue.", price: 3.50, img: "empanadas/BLDA6.webp" },
+    { id: 12, name: "Nutella y Brownie", category: "Especiales", desc: "Nutella y brownie fudge.", price: 3.50, img: "empanadas/BLDA4.webp" },
+
+    // VEGGIES
+    { id: 13, name: "4 Quesos", category: "Vegetarianas", desc: "Queso emmental, mozzarella, pecorino y provolone.", price: 3.50, img: "empanadas/BLDA6.webp" },
+    { id: 14, name: "Humita", category: "Vegetarianas", desc: "Rellena con granos de maíz amarillo, calabaza, pimientos, cebolla, cebolla tierna, variedad de quesos y albahaca fresca.", price: 3.50, img: "empanadas/BLDA7.webp" },
+    { id: 15, name: "Caprese", category: "Vegetarianas", desc: "Queso emmental, mozzarella, provolone, parmesano, albahaca fresca y variedad de tomates cherry.", price: 3.50, img: "empanadas/BLDA3.webp" },
+    { id: 16, name: "Espinaca", category: "Vegetarianas", desc: "Espinaca baby, pimientos, cebolla, puerro, verdeo, salsa bechamel, variedad de quesos y huevo duro.", price: 3.50, img: "empanadas/BLDA14.webp" },
+    { id: 17, name: "Seitán Beef", category: "Vegetarianas", desc: "Seitán, pimientos, cebolla, cebolla tierna, olivas verdes, comino y pimentón dulce.", price: 3.50, img: "empanadas/BLDA4.webp" },
+
+    // BEBIDAS (incluye Cafetería y Panadería)
+    { id: 18, name: "Estrella Galicia", category: "Bebidas", desc: "Cerveza, lata 330ml.", price: 2.00, img: "empanadas/BLDA14.webp" },
+    { id: 19, name: "Vermú", category: "Bebidas", desc: "Vermú de la casa.", price: 2.70, img: "empanadas/BLDA7.webp" },
+    { id: 20, name: "Espresso", category: "Bebidas", desc: "Café de especialidad.", price: 1.50, img: "empanadas/BLDA6.webp" },
+    { id: 21, name: "Americano", category: "Bebidas", desc: "Café de especialidad.", price: 1.60, img: "empanadas/BLDA6.webp" },
+    { id: 22, name: "Cortado", category: "Bebidas", desc: "Café de especialidad con un toque de leche.", price: 1.70, img: "empanadas/BLDA6.webp" },
+    { id: 23, name: "Latte", category: "Bebidas", desc: "Café de especialidad con leche.", price: 1.90, img: "empanadas/BLDA6.webp" },
+    { id: 24, name: "Capuccino", category: "Bebidas", desc: "Café de especialidad espumado.", price: 1.90, img: "empanadas/BLDA6.webp" },
+    { id: 25, name: "Flatwhite", category: "Bebidas", desc: "Café de especialidad doble con leche.", price: 2.30, img: "empanadas/BLDA6.webp" },
+    { id: 26, name: "Iced Latte", category: "Bebidas", desc: "Café frío con leche.", price: 2.70, img: "empanadas/BLDA6.webp" },
+    { id: 27, name: "Rooibos Vainilla Orgánico", category: "Bebidas", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
+    { id: 28, name: "Negro Chai Orgánico", category: "Bebidas", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
+    { id: 29, name: "Té Verde Orgánico", category: "Bebidas", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
+    { id: 30, name: "Manzanilla Orgánico", category: "Bebidas", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
+    { id: 31, name: "Menta Orgánico", category: "Bebidas", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
+    { id: 32, name: "Medialuna", category: "Bebidas", desc: "Clásica medialuna de manteca.", price: 2.20, img: "empanadas/BLDA6.webp" },
 ];
 
 // Estado global
