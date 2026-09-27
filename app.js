@@ -23,22 +23,24 @@ const menuItems = [
     { id: 16, name: "Espinaca", category: "Vegetarianas", desc: "Espinaca baby, pimientos, cebolla, puerro, verdeo, salsa bechamel, variedad de quesos y huevo duro.", price: 3.50, img: "empanadas/BLDA14.webp" },
     { id: 17, name: "Seitán Beef", category: "Vegetarianas", desc: "Seitán, pimientos, cebolla, cebolla tierna, olivas verdes, comino y pimentón dulce.", price: 3.50, img: "empanadas/BLDA4.webp" },
 
-    // BEBIDAS (incluye Cafetería y Panadería)
+    // BEBIDAS (Frías y de bar)
     { id: 18, name: "Estrella Galicia", category: "Bebidas", desc: "Cerveza, lata 330ml.", price: 2.00, img: "empanadas/BLDA14.webp" },
     { id: 19, name: "Vermú", category: "Bebidas", desc: "Vermú de la casa.", price: 2.70, img: "empanadas/BLDA7.webp" },
-    { id: 20, name: "Espresso", category: "Bebidas", desc: "Café de especialidad.", price: 1.50, img: "empanadas/BLDA6.webp" },
-    { id: 21, name: "Americano", category: "Bebidas", desc: "Café de especialidad.", price: 1.60, img: "empanadas/BLDA6.webp" },
-    { id: 22, name: "Cortado", category: "Bebidas", desc: "Café de especialidad con un toque de leche.", price: 1.70, img: "empanadas/BLDA6.webp" },
-    { id: 23, name: "Latte", category: "Bebidas", desc: "Café de especialidad con leche.", price: 1.90, img: "empanadas/BLDA6.webp" },
-    { id: 24, name: "Capuccino", category: "Bebidas", desc: "Café de especialidad espumado.", price: 1.90, img: "empanadas/BLDA6.webp" },
-    { id: 25, name: "Flatwhite", category: "Bebidas", desc: "Café de especialidad doble con leche.", price: 2.30, img: "empanadas/BLDA6.webp" },
-    { id: 26, name: "Iced Latte", category: "Bebidas", desc: "Café frío con leche.", price: 2.70, img: "empanadas/BLDA6.webp" },
-    { id: 27, name: "Rooibos Vainilla Orgánico", category: "Bebidas", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
-    { id: 28, name: "Negro Chai Orgánico", category: "Bebidas", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
-    { id: 29, name: "Té Verde Orgánico", category: "Bebidas", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
-    { id: 30, name: "Manzanilla Orgánico", category: "Bebidas", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
-    { id: 31, name: "Menta Orgánico", category: "Bebidas", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
-    { id: 32, name: "Medialuna", category: "Bebidas", desc: "Clásica medialuna de manteca.", price: 2.20, img: "empanadas/BLDA6.webp" },
+    
+    // CAFECITO (Cafetería, Infusiones, Panadería)
+    { id: 20, name: "Espresso", category: "Cafecito", desc: "Café espresso corto e intenso.", price: 1.50, img: "empanadas/BLDA6.webp" },
+    { id: 21, name: "Americano", category: "Cafecito", desc: "Espresso doble con agua caliente.", price: 1.60, img: "empanadas/BLDA6.webp" },
+    { id: 22, name: "Cortado", category: "Cafecito", desc: "Espresso cortado con un toque de leche.", price: 1.70, img: "empanadas/BLDA6.webp" },
+    { id: 23, name: "Latte", category: "Cafecito", desc: "Café espresso suave con abundante leche.", price: 1.90, img: "empanadas/BLDA6.webp" },
+    { id: 24, name: "Capuccino", category: "Cafecito", desc: "Espresso con leche texturizada y espuma cremosa.", price: 1.90, img: "empanadas/BLDA6.webp" },
+    { id: 25, name: "Flatwhite", category: "Cafecito", desc: "Doble shot de espresso con leche microespumada.", price: 2.30, img: "empanadas/BLDA6.webp" },
+    { id: 26, name: "Iced Latte", category: "Cafecito", desc: "Café espresso con leche fría y hielo.", price: 2.70, img: "empanadas/BLDA6.webp" },
+    { id: 27, name: "Rooibos Vainilla Orgánico", category: "Cafecito", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
+    { id: 28, name: "Negro Chai Orgánico", category: "Cafecito", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
+    { id: 29, name: "Té Verde Orgánico", category: "Cafecito", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
+    { id: 30, name: "Manzanilla Orgánico", category: "Cafecito", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
+    { id: 31, name: "Menta Orgánico", category: "Cafecito", desc: "Infusión orgánica.", price: 1.80, img: "empanadas/BLDA6.webp" },
+    { id: 32, name: "Medialuna", category: "Cafecito", desc: "Medialuna dulce tradicional de manteca.", price: 2.20, img: "empanadas/BLDA6.webp" },
 ];
 
 // Estado global
