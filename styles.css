@@ -3889,3 +3889,80 @@ html, body, button, a,
     }
 }
 /* END MOBILE UX PATCH v2 */
+/* =========================================
+   UX IMPROVEMENTS PATCH v3
+   ========================================= */
+
+/* --- FIX 1: Microanimacion card al remover item --- */
+@keyframes card-deselect {
+    0%   { box-shadow: 0 0 0 2px rgba(10,92,54,0.35); background: rgba(10,92,54,0.04); }
+    100% { box-shadow: none; background: var(--bg-white); }
+}
+.menu-card.qty-zero {
+    animation: card-deselect 0.4s ease forwards;
+}
+@keyframes card-select {
+    0%   { box-shadow: none; }
+    40%  { box-shadow: 0 0 0 3px rgba(10,92,54,0.4); }
+    100% { box-shadow: 0 0 0 2px rgba(10,92,54,0.15); }
+}
+.menu-card.qty-active {
+    box-shadow: 0 0 0 2px rgba(10,92,54,0.15) !important;
+    animation: card-select 0.3s ease forwards;
+}
+
+/* --- FIX 3: Animacion panel Tu Pedido al agregar primer item (Desktop) --- */
+@keyframes ticket-wake {
+    0%   { box-shadow: 0 0 0 0 rgba(10,92,54,0); }
+    40%  { box-shadow: 0 0 0 5px rgba(10,92,54,0.25); }
+    100% { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+}
+@media (min-width: 900px) {
+    .checkout-ticket.first-item {
+        animation: ticket-wake 0.5s ease forwards;
+    }
+}
+
+/* --- FIX 5: Visual feedback en local seleccionado --- */
+.checkout-radio-group {
+    background: #F0F0F0 !important;
+    padding: 5px !important;
+    border-radius: 999px !important;
+    gap: 4px !important;
+}
+.radio-label {
+    padding: 7px 16px !important;
+    border-radius: 999px !important;
+    transition: background 0.2s ease, color 0.2s ease !important;
+    font-weight: 500 !important;
+}
+.radio-label:has(input:checked) {
+    background: #0A5C36 !important;
+    color: #FFFFFF !important;
+}
+.radio-label:has(input:checked) input {
+    accent-color: #FFFFFF !important;
+}
+/* Fallback para navegadores sin :has() */
+.radio-label.is-selected {
+    background: #0A5C36 !important;
+    color: #FFFFFF !important;
+}
+
+/* --- FIX 7: Hover en review cards (Desktop) --- */
+@media (min-width: 769px) {
+    .review-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        cursor: default;
+    }
+    .review-card:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.1) !important;
+        border-color: #D0D0D0 !important;
+    }
+}
+
+/* --- FIX 6: Ocultar texto "TICKET VACIO" --- */
+.cart-empty {
+    display: none !important;
+}

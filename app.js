@@ -1,4 +1,4 @@
-// Datos del menú
+﻿// Datos del menú
 const menuItems = [
     // CLÁSICAS
     { id: 1, name: "Ternera Suave", category: "Clásicas", desc: "Carne de ternera picada, pimientos, cebolla, cebolla tierna, huevo duro, olivas verdes, comino y pimentón dulce.", price: 3.50, img: "empanadas/BLDA6.webp" },
@@ -251,6 +251,32 @@ function setupEventListeners() {
         checkFormValidity();
     });
 
+
+    // FIX 4: Scroll input into view on mobile when keyboard appears
+    document.querySelectorAll('.clean-form input').forEach(function(input) {
+        input.addEventListener('focus', function() {
+            if (window.innerWidth <= 899) {
+                setTimeout(function() {
+                    input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 320);
+            }
+        });
+    });
+
+    // FIX 5: Visual feedback en local seleccionado
+    var branchInputs = document.querySelectorAll('[name=branch]');
+    function updateBranchLabels() {
+        branchInputs.forEach(function(input) {
+            var label = input.closest('.radio-label');
+            if (label) {
+                if (input.checked) { label.classList.add('is-selected'); }
+                else { label.classList.remove('is-selected'); }
+            }
+        });
+    }
+    branchInputs.forEach(function(input) { input.addEventListener('change', updateBranchLabels); });
+    updateBranchLabels();
+
     // Navbar Scroll Effect
     const navbar = document.querySelector('.premium-navbar');
     /* window.addEventListener('scroll', ... ) removed for permanent glassmorphism */
@@ -259,6 +285,7 @@ function setupEventListeners() {
 function updateQuantity(id, change) {
     const currentQty = cart[id] || 0;
     const newQty = currentQty + change;
+    const wasEmpty = Object.keys(cart).length === 0;
 
     if (newQty > 0) {
         cart[id] = newQty;
@@ -266,14 +293,41 @@ function updateQuantity(id, change) {
         delete cart[id];
     }
 
-    const qtyDisplay = document.getElementById(`qty-${id}`);
+    const qtyDisplay = document.getElementById("qty-${id}");
     if (qtyDisplay) {
         qtyDisplay.textContent = cart[id] || 0;
+
+        // FIX 1: Microanimacion en la card al cambiar cantidad
+        const card = qtyDisplay.closest('.menu-card');
+        if (card) {
+            card.classList.remove('qty-active', 'qty-zero');
+            void card.offsetWidth;
+            if (cart[id] > 0) {
+                card.classList.add('qty-active');
+            } else {
+                card.classList.add('qty-zero');
+                setTimeout(function() { card.classList.remove('qty-zero'); }, 400);
+            }
+        }
+    }
+
+    // FIX 3: Animacion panel al agregar primer item (Desktop)
+    const ticket = document.querySelector('.checkout-ticket');
+    if (ticket) {
+        const isNowFirstItem = wasEmpty && Object.keys(cart).length > 0;
+        if (isNowFirstItem) {
+            ticket.classList.remove('first-item');
+            void ticket.offsetWidth;
+            ticket.classList.add('first-item');
+            setTimeout(function() { ticket.classList.remove('first-item'); }, 500);
+        }
     }
 
     updateCartUI();
     checkFormValidity();
 }
+
+
 
 function updateCartUI() {
     let totalPrice = 0;
@@ -283,7 +337,7 @@ function updateCartUI() {
     const cartIds = Object.keys(cart);
 
     if (cartIds.length === 0) {
-        cartSummary.innerHTML = '<p class="cart-empty">TICKET VACÍO</p>';
+        cartSummary.innerHTML = '';
     } else {
         cartIds.forEach(idStr => {
             const id = parseInt(idStr);
