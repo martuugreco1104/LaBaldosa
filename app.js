@@ -1,4 +1,4 @@
-﻿// Datos del menú
+// Datos del menú
 const menuItems = [
     // CLÁSICAS
     { id: 1, name: "Ternera Suave", category: "Clásicas", desc: "Carne de ternera picada, pimientos, cebolla, cebolla tierna, huevo duro, olivas verdes, comino y pimentón dulce.", price: 3.50, img: "empanadas/BLDA6.webp" },
@@ -293,7 +293,7 @@ function updateQuantity(id, change) {
         delete cart[id];
     }
 
-    const qtyDisplay = document.getElementById("qty-${id}");
+    const qtyDisplay = document.getElementById(`qty-${id}`);
     if (qtyDisplay) {
         qtyDisplay.textContent = cart[id] || 0;
 
