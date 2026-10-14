@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    LA BALDOSA - CONCEPTUAL EDITORIAL DESIGN
    ========================================= */
 :root {
@@ -3965,4 +3965,198 @@ html, body, button, a,
 /* --- FIX 6: Ocultar texto "TICKET VACIO" --- */
 .cart-empty {
     display: none !important;
+}
+
+/* ========================================================
+   RESPONSIVE PRODUCT CARD & STEPPER CONTAINMENT (MOBILE)
+   ======================================================== */
+@media (max-width: 768px) {
+    /* 1. Contenedor de la sección y lista con padding lateral seguro */
+    .ordering-experience {
+        overflow-x: hidden !important;
+    }
+    .ordering-experience .container.pos-container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .order-split, .pos-split, .menu-column-left, .pos-menu, .menu-list, .pos-list, .menu-list-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Tarjeta de producto: 100% del contenedor, sin desborde horizontal */
+    .menu-card.product-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        padding: 10px 12px !important;
+        margin: 0 0 10px 0 !important;
+        border-radius: 12px !important;
+        gap: 8px !important;
+        overflow: hidden !important;
+    }
+
+    /* 3. Imagen del producto: tamaño fijo no deformable */
+    .menu-img.product-card-img {
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px !important;
+        max-width: 52px !important;
+        flex: 0 0 52px !important;
+        border-radius: 8px !important;
+        object-fit: cover !important;
+        margin: 0 !important;
+    }
+
+    /* 4. Bloque central de texto: absorbe el espacio disponible sin empujar el stepper */
+    .product-card-info {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        width: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+    .menu-title.product-title {
+        width: 100% !important;
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+        margin: 0 0 2px 0 !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    .menu-desc.product-description {
+        width: 100% !important;
+        font-size: 11px !important;
+        line-height: 1.25 !important;
+        margin: 0 0 2px 0 !important;
+        color: #666666 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        word-break: break-word !important;
+    }
+    .menu-price.product-price {
+        font-size: 12.5px !important;
+        font-weight: 700 !important;
+        color: var(--brand-green, #0A5C36) !important;
+        margin: 0 !important;
+        line-height: 1 !important;
+    }
+
+    /* 5. Stepper: fijo, sin encogerse ni salirse de la tarjeta */
+    .stepper.quantity-stepper {
+        flex: 0 0 auto !important;
+        flex-shrink: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #F5F5F0 !important;
+        border-radius: 999px !important;
+        border: 1px solid rgba(0, 0, 0, 0.08) !important;
+        padding: 3px 6px !important;
+        gap: 4px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        min-width: unset !important;
+        width: auto !important;
+        max-width: none !important;
+    }
+    .stepper-btn {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        min-height: 28px !important;
+        border-radius: 50% !important;
+        background: transparent !important;
+        border: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #111111 !important;
+        cursor: pointer !important;
+        box-sizing: border-box !important;
+    }
+    .stepper-btn:active {
+        background: rgba(0, 0, 0, 0.06) !important;
+    }
+    .stepper-val {
+        width: 24px !important;
+        min-width: 20px !important;
+        text-align: center !important;
+        font-family: var(--font-body, 'Inter', sans-serif) !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #111111 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* Ajuste específico para viewports estrechos (iPhone SE, Galaxy Fold, etc. < 420px) */
+@media (max-width: 420px) {
+    .ordering-experience .container.pos-container {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+    .menu-card.product-card {
+        padding: 8px 10px !important;
+        gap: 6px !important;
+    }
+    .menu-img.product-card-img {
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        max-width: 48px !important;
+        flex: 0 0 48px !important;
+    }
+    .menu-title.product-title {
+        font-size: 13px !important;
+    }
+    .menu-desc.product-description {
+        font-size: 10.5px !important;
+        -webkit-line-clamp: 1 !important;
+    }
+    .menu-price.product-price {
+        font-size: 12px !important;
+    }
+    .stepper.quantity-stepper {
+        padding: 2px 4px !important;
+        gap: 2px !important;
+    }
+    .stepper-btn {
+        width: 26px !important;
+        height: 26px !important;
+        min-width: 26px !important;
+        min-height: 26px !important;
+        font-size: 15px !important;
+    }
+    .stepper-val {
+        width: 20px !important;
+        min-width: 18px !important;
+        font-size: 12px !important;
+    }
 }
